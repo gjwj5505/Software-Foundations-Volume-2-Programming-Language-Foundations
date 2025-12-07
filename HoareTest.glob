@@ -15,7 +15,7 @@ R715:719 PLF.Hoare <> <> lib
 R729:733 PLF.HoareTest Check <> mod
 def 737:745 <> Unnamed_thm
 R742:745 PLF.Hoare <> :::'True' not
-R897:911 PLF.Hoare <> hoare_post_true prfax
+R897:911 PLF.Hoare <> hoare_post_true thm
 R930:938 PLF.Hoare <> Assertion def
 binder 924:924 <> P:3
 binder 926:926 <> Q:4
@@ -29,7 +29,7 @@ R983:1000 PLF.Hoare <> valid_hoare_triple def
 R1002:1002 PLF.HoareTest <> P:3 var
 R1004:1004 PLF.HoareTest <> c:5 var
 R1006:1006 PLF.HoareTest <> Q:4 var
-R897:911 PLF.Hoare <> hoare_post_true prfax
+R897:911 PLF.Hoare <> hoare_post_true thm
 R930:938 PLF.Hoare <> Assertion def
 binder 924:924 <> P:7
 binder 926:926 <> Q:8
@@ -43,10 +43,10 @@ R983:1000 PLF.Hoare <> valid_hoare_triple def
 R1002:1002 PLF.HoareTest <> P:7 var
 R1004:1004 PLF.HoareTest <> c:9 var
 R1006:1006 PLF.HoareTest <> Q:8 var
-R1058:1072 PLF.Hoare <> hoare_post_true prfax
+R1058:1072 PLF.Hoare <> hoare_post_true thm
 def 1075:1083 <> Unnamed_thm
 R1080:1083 PLF.Hoare <> :::'True' not
-R1246:1260 PLF.Hoare <> hoare_pre_false prfax
+R1246:1260 PLF.Hoare <> hoare_pre_false thm
 R1279:1287 PLF.Hoare <> Assertion def
 binder 1273:1273 <> P:11
 binder 1275:1275 <> Q:12
@@ -61,7 +61,7 @@ R1338:1355 PLF.Hoare <> valid_hoare_triple def
 R1357:1357 PLF.HoareTest <> P:11 var
 R1359:1359 PLF.HoareTest <> c:13 var
 R1361:1361 PLF.HoareTest <> Q:12 var
-R1246:1260 PLF.Hoare <> hoare_pre_false prfax
+R1246:1260 PLF.Hoare <> hoare_pre_false thm
 R1279:1287 PLF.Hoare <> Assertion def
 binder 1273:1273 <> P:15
 binder 1275:1275 <> Q:16
@@ -76,10 +76,10 @@ R1338:1355 PLF.Hoare <> valid_hoare_triple def
 R1357:1357 PLF.HoareTest <> P:15 var
 R1359:1359 PLF.HoareTest <> c:17 var
 R1361:1361 PLF.HoareTest <> Q:16 var
-R1413:1427 PLF.Hoare <> hoare_pre_false prfax
+R1413:1427 PLF.Hoare <> hoare_pre_false thm
 def 1430:1438 <> Unnamed_thm
 R1435:1438 PLF.Hoare <> :::'True' not
-R1603:1618 PLF.Hoare <> hoare_asgn_wrong prfax
+R1603:1618 PLF.Hoare <> hoare_asgn_wrong thm
 R1624:1625 Corelib.Init.Logic <> ex ind
 R1627:1630 PLF.Imp <> aexp ind
 R1644:1647 PLF.Imp <> aexp ind
@@ -104,7 +104,7 @@ R1843:1846 PLF.Hoare <> Aexp def
 R1826:1837 PLF.Hoare <> Aexp_of_aexp def
 R1839:1839 PLF.HoareTest <> a:19 var
 R1849:1850 PLF.HoareTest <> st:20 var
-R1603:1618 PLF.Hoare <> hoare_asgn_wrong prfax
+R1603:1618 PLF.Hoare <> hoare_asgn_wrong thm
 R1624:1625 Corelib.Init.Logic <> ex ind
 R1627:1630 PLF.Imp <> aexp ind
 R1644:1647 PLF.Imp <> aexp ind
@@ -129,10 +129,10 @@ R1843:1846 PLF.Hoare <> Aexp def
 R1826:1837 PLF.Hoare <> Aexp_of_aexp def
 R1839:1839 PLF.HoareTest <> a:21 var
 R1849:1850 PLF.HoareTest <> st:22 var
-R1906:1921 PLF.Hoare <> hoare_asgn_wrong prfax
+R1906:1921 PLF.Hoare <> hoare_asgn_wrong thm
 def 1924:1932 <> Unnamed_thm
 R1929:1932 PLF.Hoare <> :::'True' not
-R2111:2124 PLF.Hoare <> hoare_asgn_fwd prfax
+R2111:2124 PLF.Hoare <> hoare_asgn_fwd thm
 R2141:2143 Corelib.Init.Datatypes <> nat ind
 binder 2137:2137 <> m:23
 R2151:2154 PLF.Imp <> aexp ind
@@ -184,7 +184,7 @@ R2465:2467 Corelib.Init.Datatypes <> nat ind
 R2469:2470 PLF.HoareTest <> st:28 var
 R2472:2472 PLF.Imp <> X def
 R2474:2474 PLF.HoareTest <> m:23 var
-R2111:2124 PLF.Hoare <> hoare_asgn_fwd prfax
+R2111:2124 PLF.Hoare <> hoare_asgn_fwd thm
 R2141:2143 Corelib.Init.Datatypes <> nat ind
 binder 2137:2137 <> m:29
 R2151:2154 PLF.Imp <> aexp ind
@@ -236,10 +236,10 @@ R2465:2467 Corelib.Init.Datatypes <> nat ind
 R2469:2470 PLF.HoareTest <> st:34 var
 R2472:2472 PLF.Imp <> X def
 R2474:2474 PLF.HoareTest <> m:29 var
-R2590:2603 PLF.Hoare <> hoare_asgn_fwd prfax
+R2590:2603 PLF.Hoare <> hoare_asgn_fwd thm
 def 2606:2614 <> Unnamed_thm
 R2611:2614 PLF.Hoare <> :::'True' not
-R2786:2803 PLF.Hoare <> assertion_sub_ex1' prfax
+R2786:2803 PLF.Hoare <> assertion_sub_ex1' ex
 R2808:2825 PLF.Hoare <> valid_hoare_triple def
 R2840:2844 PLF.Imp <> state def
 binder 2835:2836 <> st:35
@@ -269,7 +269,7 @@ R3018:3019 PLF.HoareTest <> st:36 var
 R3041:3044 PLF.Hoare <> Aexp def
 R3024:3034 PLF.Hoare <> Aexp_of_nat def
 R3047:3048 PLF.HoareTest <> st:36 var
-R2786:2803 PLF.Hoare <> assertion_sub_ex1' prfax
+R2786:2803 PLF.Hoare <> assertion_sub_ex1' ex
 R2808:2825 PLF.Hoare <> valid_hoare_triple def
 R2840:2844 PLF.Imp <> state def
 binder 2835:2836 <> st:37
@@ -299,10 +299,10 @@ R3018:3019 PLF.HoareTest <> st:38 var
 R3041:3044 PLF.Hoare <> Aexp def
 R3024:3034 PLF.Hoare <> Aexp_of_nat def
 R3047:3048 PLF.HoareTest <> st:38 var
-R3102:3119 PLF.Hoare <> assertion_sub_ex1' prfax
+R3102:3119 PLF.Hoare <> assertion_sub_ex1' ex
 def 3122:3130 <> Unnamed_thm
 R3127:3130 PLF.Hoare <> :::'True' not
-R3216:3233 PLF.Hoare <> assertion_sub_ex2' prfax
+R3216:3233 PLF.Hoare <> assertion_sub_ex2' ex
 R3238:3255 PLF.Hoare <> valid_hoare_triple def
 R3270:3274 PLF.Imp <> state def
 binder 3265:3266 <> st:39
@@ -361,7 +361,7 @@ R3689:3691 PLF.Imp <> AId constr
 R3693:3693 PLF.Imp <> X def
 R3704:3706 PLF.HoareTest <> st0:44 var
 R3739:3740 PLF.HoareTest <> st:42 var
-R3216:3233 PLF.Hoare <> assertion_sub_ex2' prfax
+R3216:3233 PLF.Hoare <> assertion_sub_ex2' ex
 R3238:3255 PLF.Hoare <> valid_hoare_triple def
 R3270:3274 PLF.Imp <> state def
 binder 3265:3266 <> st:45
@@ -420,10 +420,10 @@ R3689:3691 PLF.Imp <> AId constr
 R3693:3693 PLF.Imp <> X def
 R3704:3706 PLF.HoareTest <> st0:50 var
 R3739:3740 PLF.HoareTest <> st:48 var
-R3933:3950 PLF.Hoare <> assertion_sub_ex2' prfax
+R3933:3950 PLF.Hoare <> assertion_sub_ex2' ex
 def 3953:3961 <> Unnamed_thm
 R3958:3961 PLF.Hoare <> :::'True' not
-R4132:4150 PLF.Hoare <> hoare_asgn_example4 prfax
+R4132:4150 PLF.Hoare <> hoare_asgn_example4 ex
 R4155:4172 PLF.Hoare <> valid_hoare_triple def
 R4183:4187 PLF.Imp <> state def
 R4192:4195 PLF.Hoare <> :::'True' not
@@ -465,7 +465,7 @@ R4386:4389 PLF.Hoare <> Aexp def
 R4370:4380 PLF.Hoare <> Aexp_of_nat def
 R4392:4394 PLF.HoareTest <> st0:53 var
 R4427:4428 PLF.HoareTest <> st:51 var
-R4132:4150 PLF.Hoare <> hoare_asgn_example4 prfax
+R4132:4150 PLF.Hoare <> hoare_asgn_example4 ex
 R4155:4172 PLF.Hoare <> valid_hoare_triple def
 R4183:4187 PLF.Imp <> state def
 R4192:4195 PLF.Hoare <> :::'True' not
@@ -507,10 +507,10 @@ R4386:4389 PLF.Hoare <> Aexp def
 R4370:4380 PLF.Hoare <> Aexp_of_nat def
 R4392:4394 PLF.HoareTest <> st0:56 var
 R4427:4428 PLF.HoareTest <> st:54 var
-R4637:4655 PLF.Hoare <> hoare_asgn_example4 prfax
+R4637:4655 PLF.Hoare <> hoare_asgn_example4 ex
 def 4658:4666 <> Unnamed_thm
 R4663:4666 PLF.Hoare <> :::'True' not
-R4825:4837 PLF.Hoare <> swap_exercise prfax
+R4825:4837 PLF.Hoare <> swap_exercise thm
 R4842:4859 PLF.Hoare <> valid_hoare_triple def
 R4874:4878 PLF.Imp <> state def
 binder 4869:4870 <> st:57
@@ -525,7 +525,7 @@ R4927:4938 PLF.Hoare <> Aexp_of_aexp def
 R4941:4943 PLF.Imp <> AId constr
 R4945:4945 PLF.Imp <> Y def
 R4956:4957 PLF.HoareTest <> st:57 var
-R4964:4975 PLF.Hoare <> swap_program prfax
+R4964:4975 PLF.Hoare <> swap_program def
 R4990:4994 PLF.Imp <> state def
 binder 4985:4986 <> st:58
 R5003:5004 Corelib.Init.Peano <> le ind
@@ -539,7 +539,7 @@ R5043:5054 PLF.Hoare <> Aexp_of_aexp def
 R5057:5059 PLF.Imp <> AId constr
 R5061:5061 PLF.Imp <> X def
 R5072:5073 PLF.HoareTest <> st:58 var
-R4825:4837 PLF.Hoare <> swap_exercise prfax
+R4825:4837 PLF.Hoare <> swap_exercise thm
 R4842:4859 PLF.Hoare <> valid_hoare_triple def
 R4874:4878 PLF.Imp <> state def
 binder 4869:4870 <> st:59
@@ -554,7 +554,7 @@ R4927:4938 PLF.Hoare <> Aexp_of_aexp def
 R4941:4943 PLF.Imp <> AId constr
 R4945:4945 PLF.Imp <> Y def
 R4956:4957 PLF.HoareTest <> st:59 var
-R4964:4975 PLF.Hoare <> swap_program prfax
+R4964:4975 PLF.Hoare <> swap_program def
 R4990:4994 PLF.Imp <> state def
 binder 4985:4986 <> st:60
 R5003:5004 Corelib.Init.Peano <> le ind
@@ -568,10 +568,10 @@ R5043:5054 PLF.Hoare <> Aexp_of_aexp def
 R5057:5059 PLF.Imp <> AId constr
 R5061:5061 PLF.Imp <> X def
 R5072:5073 PLF.HoareTest <> st:60 var
-R5127:5139 PLF.Hoare <> swap_exercise prfax
+R5127:5139 PLF.Hoare <> swap_exercise thm
 def 5142:5150 <> Unnamed_thm
 R5147:5150 PLF.Hoare <> :::'True' not
-R5329:5342 PLF.Hoare <> invalid_triple prfax
+R5329:5342 PLF.Hoare <> invalid_triple thm
 R5347:5349 Corelib.Init.Logic <> not def
 R5367:5370 PLF.Imp <> aexp ind
 binder 5363:5363 <> a:61
@@ -610,7 +610,7 @@ R5642:5645 PLF.Hoare <> Aexp def
 R5626:5636 PLF.Hoare <> Aexp_of_nat def
 R5638:5638 PLF.HoareTest <> n:62 var
 R5648:5649 PLF.HoareTest <> st:64 var
-R5329:5342 PLF.Hoare <> invalid_triple prfax
+R5329:5342 PLF.Hoare <> invalid_triple thm
 R5347:5349 Corelib.Init.Logic <> not def
 R5367:5370 PLF.Imp <> aexp ind
 binder 5363:5363 <> a:65
@@ -649,7 +649,7 @@ R5642:5645 PLF.Hoare <> Aexp def
 R5626:5636 PLF.Hoare <> Aexp_of_nat def
 R5638:5638 PLF.HoareTest <> n:66 var
 R5648:5649 PLF.HoareTest <> st:68 var
-R5704:5717 PLF.Hoare <> invalid_triple prfax
+R5704:5717 PLF.Hoare <> invalid_triple thm
 def 5720:5728 <> Unnamed_thm
 R5725:5728 PLF.Hoare <> :::'True' not
 R5887:5899 PLF.Hoare <> if_minus_plus prfax
@@ -1144,13 +1144,13 @@ R10413:10416 PLF.Hoare <> :::'True' not
 R10469:10507 PLF.Hoare HoareAssertAssume assert_assume_example prfax
 def 10510:10518 <> Unnamed_thm
 R10515:10518 PLF.Hoare <> :::'True' not
-R11475:11489 PLF.Hoare <> hoare_post_true prfax
-R11556:11570 PLF.Hoare <> hoare_pre_false prfax
-R11638:11653 PLF.Hoare <> hoare_asgn_wrong prfax
-R11723:11740 PLF.Hoare <> assertion_sub_ex1' prfax
-R11810:11827 PLF.Hoare <> assertion_sub_ex2' prfax
-R11898:11916 PLF.Hoare <> hoare_asgn_example4 prfax
-R11981:11993 PLF.Hoare <> swap_exercise prfax
+R11475:11489 PLF.Hoare <> hoare_post_true thm
+R11556:11570 PLF.Hoare <> hoare_pre_false thm
+R11638:11653 PLF.Hoare <> hoare_asgn_wrong thm
+R11723:11740 PLF.Hoare <> assertion_sub_ex1' ex
+R11810:11827 PLF.Hoare <> assertion_sub_ex2' ex
+R11898:11916 PLF.Hoare <> hoare_asgn_example4 ex
+R11981:11993 PLF.Hoare <> swap_exercise thm
 R12058:12070 PLF.Hoare <> if_minus_plus prfax
 R12138:12153 PLF.Hoare If1 if1true_test prfax
 R12222:12238 PLF.Hoare If1 if1false_test prfax
@@ -1158,7 +1158,7 @@ R12364:12381 PLF.Hoare If1 hoare_if1_good prfax
 R12471:12508 PLF.Hoare HoareAssertAssume assert_assume_differ prfax
 R12599:12637 PLF.Hoare HoareAssertAssume assert_implies_assume prfax
 R12728:12766 PLF.Hoare HoareAssertAssume assert_assume_example prfax
-R12882:12895 PLF.Hoare <> hoare_asgn_fwd prfax
-R12961:12974 PLF.Hoare <> invalid_triple prfax
+R12882:12895 PLF.Hoare <> hoare_asgn_fwd thm
+R12961:12974 PLF.Hoare <> invalid_triple thm
 R13042:13057 PLF.Hoare Himp hoare_havoc prfax
 R13124:13138 PLF.Hoare Himp havoc_post prfax

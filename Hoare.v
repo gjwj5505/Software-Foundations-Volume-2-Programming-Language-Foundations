@@ -1150,9 +1150,10 @@ Qed.
     bullet from example 1: *)
 
 Ltac assertion_auto :=
-  try auto;  (* as in example 1, above *)
+  try eauto;  (* as in example 1, above *)
   try (unfold "->>", assertion_sub, t_update;
        intros; simpl in *; nia). (* as in example 2 *)
+
 
 Example assertion_sub_example2'' :
   {{X < 4}}
@@ -1452,12 +1453,12 @@ Arguments bassertion /.
 
 Lemma bexp_eval_false : forall b st,
   beval st b = false -> ~ ((bassertion b) st).
-Proof. congruence. Qed.
+Proof. simpl. intros b st H1 H2. rewrite H1 in H2. discriminate. Qed.
 
 Hint Resolve bexp_eval_false : core.
 
 (** We mentioned the [congruence] tactic in passing in
-    [Auto] when building the [find_rwd] tactic.  Like
+    [Auto] when building the [find_rwd] tactic.  Lik
     [find_rwd], [congruence] is able to automatically find that both
     [beval st b = false] and [beval st b = true] are being assumed,
     notice the contradiction, and [discriminate] to complete the
@@ -1479,8 +1480,24 @@ Theorem hoare_if : forall P Q (b:bexp) c1 c2,
         {{P}} if b then c1 else c2 end {{Q}}.
 *)
 Proof.
-  intros P Q b c1 c2 HTrue HFalse st st' HE HP.
-  inversion HE; subst; eauto.
+  intros P Q b c1 c2 Hthen Helse st st' Hif HP.
+  inversion Hif; subst; clear Hif.
+  - unfold valid_hoare_triple in Hthen.
+    specialize Hthen with (st := st) (st' := st').
+    apply Hthen.
+    + assumption.
+    + split.
+      -- assumption.
+      -- eauto.
+  - unfold valid_hoare_triple in Helse.
+    specialize Helse with (st := st) (st' := st').
+    apply Helse.
+    + assumption.
+    + split.
+      -- assumption.
+      -- eauto.
+  (* intros P Q b c1 c2 HTrue HFalse st st' HE HP.
+  inversion HE; subst; eauto. *)
 Qed.
 
 (* ----------------------------------------------------------------- *)
@@ -1499,6 +1516,23 @@ Example if_example :
   {{X <= Y}}.
 Proof.
   apply hoare_if.
+  - eapply hoare_consequence_pre.
+    + eapply hoare_asgn.
+    + unfold "->>". 
+      unfold assertion_sub, t_update, bassertion.
+      simpl. intros. rewrite eqb_eq in H.
+      assertion_auto.
+  - eapply hoare_consequence_pre.
+    + eapply hoare_asgn.
+    + assertion_auto.
+
+
+
+
+
+
+
+  (* apply hoare_if.
   - (* Then *)
     eapply hoare_consequence_pre.
     + apply hoare_asgn.
@@ -1509,7 +1543,7 @@ Proof.
   - (* Else *)
     eapply hoare_consequence_pre.
     + apply hoare_asgn.
-    + assertion_auto.
+    + assertion_auto. *)
 Qed.
 
 (** As we did earlier, it would be nice to eliminate all the low-level
@@ -1521,10 +1555,12 @@ Qed.
     clean it up a little in the process. *)
 
 Ltac assertion_auto' :=
+  try eauto;  (* as in example 1, above *)
   unfold "->>", assertion_sub, t_update, bassertion;
   intros; simpl in *;
   try rewrite -> eqb_eq in *; (* for equalities *)
   auto; try lia.
+  
 
 (** Now the proof is quite streamlined. *)
 
@@ -1562,12 +1598,14 @@ Qed.
 (** For later proofs, it will help to extend [assertion_auto'] to handle
     inequalities, too. *)
 
+    
 Ltac assertion_auto'' :=
+  try eauto;  (* as in example 1, above *)
   unfold "->>", assertion_sub, t_update, bassertion;
   intros; simpl in *;
   try rewrite -> eqb_eq in *;
   try rewrite -> leb_le in *;  (* for inequalities *)
-  auto; try lia.
+  auto; try nia.
 
 (** **** Exercise: 2 stars, standard (if_minus_plus)
 
@@ -1583,7 +1621,10 @@ Theorem if_minus_plus :
     end
   {{Y = X + Z}}.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  apply hoare_if; 
+  eapply hoare_consequence_pre; 
+  try apply hoare_asgn; try assertion_auto''.
+Qed.
 (** [] *)
 
 (* ----------------------------------------------------------------- *)
@@ -1843,9 +1884,16 @@ Proof.
      we clear away all the cases except those involving [while]. *)
   remember <{while b do c end}> as original_command eqn:Horig.
   (* remember을 왜 해야 되는지 잘 생각해보기 *)
-  induction Heval;
-    try (inversion Horig; subst; clear Horig);
-    eauto.
+  induction Heval.
+  - inversion Horig; subst; clear Horig.
+  - inversion Horig; subst; clear Horig.
+  - inversion Horig; subst; clear Horig.
+  - inversion Horig; subst; clear Horig.
+  - inversion Horig; subst; clear Horig.
+  - inversion Horig; subst; clear Horig. eauto.
+  - inversion Horig; subst; clear Horig. eauto.
+    (* try (inversion Horig; subst; clear Horig);
+    eauto. *)
 Qed.
 
 (** We call [P] a _loop invariant_ of [while b do c end] if
@@ -1889,7 +1937,7 @@ Example while_example :
       X := X + 1
     end
   {{X = 3}}.
- Proof.
+Proof.
   eapply hoare_consequence_post.
   - apply hoare_while.
     eapply hoare_consequence_pre.
@@ -1905,8 +1953,14 @@ Theorem always_loop_hoare : forall Q,
 Proof.
   intros Q.
   eapply hoare_consequence_post.
+  - eapply hoare_while.
+    assertion_auto''.
+  - assertion_auto''.
+
+  (* intros Q.
+  eapply hoare_consequence_post.
   - apply hoare_while. apply hoare_post_true. auto.
-  - simpl. intros st [Hinv Hguard]. congruence.
+  - simpl. intros st [Hinv Hguard]. congruence. *)
 Qed.
 
 (** Of course, this result is not surprising if we remember that
@@ -2001,7 +2055,15 @@ Inductive ceval : state -> com -> state -> Prop :=
       st  =[ c ]=> st' ->
       st' =[ while b do c end ]=> st'' ->
       st  =[ while b do c end ]=> st''
-(* FILL IN HERE *)
+  | E_RepeatFalse : forall st st' st'' b c,
+      st  =[ c ]=> st' ->
+      beval st' b = false ->
+      st' =[ repeat c until b end ]=> st'' ->
+      st  =[ repeat c until b end ]=> st''
+  | E_RepeatTrue : forall st st' b c,
+      st  =[ c ]=> st' ->
+      beval st' b = true ->
+      st  =[ repeat c until b end ]=> st'
 
 where "st '=[' c ']=>' st'" := (ceval st c st').
 
@@ -2029,13 +2091,49 @@ Definition ex1_repeat :=
 Theorem ex1_repeat_works :
   empty_st =[ ex1_repeat ]=> (Y !-> 1 ; X !-> 1).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  eapply E_RepeatTrue.
+  - eapply E_Seq.
+    + eapply E_Asgn. simpl. reflexivity.
+    + eapply E_Asgn. simpl. reflexivity.
+  - simpl. reflexivity.
+Qed.
 
 (** Now state and prove a theorem, [hoare_repeat], that expresses an
     appropriate proof rule for [repeat] commands.  Use [hoare_while]
     as a model, and try to make your rule as precise as possible. *)
 
 (* FILL IN HERE *)
+
+Theorem hoare_repeat : forall P Q (b:bexp) c,
+  {{P}} c {{Q}} ->
+  {{Q /\ ~b}} c {{Q}} ->
+  {{P}} repeat c until b end {{Q /\ b}}.
+Proof.
+  intros.
+  remember <{repeat c until b end}> as original_command eqn:Horig.
+  intros st st'' Hrep HP.
+  induction Hrep.
+  - discriminate.
+  - discriminate.
+  - discriminate.
+  - discriminate.
+  - discriminate.
+  - discriminate.
+  - discriminate.
+  - (*repeat false*)
+    clear IHHrep1.
+    inversion Horig. subst. clear Horig.
+    admit.
+  - (*repeat true*)
+    inversion Horig. subst. clear Horig. eauto.
+      
+    
+  (* | E_RepeatFalse : forall st st' st'' b c,
+      st  =[ c ]=> st' ->
+      beval st' b = false ->
+      st' =[ repeat c until b end ]=> st'' ->
+      st  =[ repeat c until b end ]=> st'' *)
+Admitted.
 
 (** For full credit, make sure (informally) that your rule can be used
     to prove the following valid Hoare triple:
