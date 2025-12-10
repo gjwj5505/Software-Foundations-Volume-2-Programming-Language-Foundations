@@ -575,7 +575,7 @@ Reserved Notation "t '-->' t'" (at level 40).
 Inductive step : tm -> tm -> Prop :=
   | ST_AppAbs : forall x T2 t1 v2,
          value v2 ->
-         <{(\x:T2, t1) v2}> --> <{[x:=v2]t1}>
+         <{(\x:T2, t1) v2}> --> <{[x:=v2]t1}> (* normal form 유일성? eager evaluation? *)
   | ST_App1 : forall t1 t1' t2,
          t1 --> t1' ->
          <{t1 t2}> --> <{t1' t2}>
@@ -655,13 +655,21 @@ Proof.
 Lemma step_example3 :
   <{idBB notB true}> -->* <{false}>.
 Proof.
-  eapply multi_step.
+  (* repeat (
+    first [eapply multi_refl | eapply multi_step];
+    simpl; eauto using step, value
+  ). *)
+
+  normalize.
+
+  (* eapply multi_step.
   - apply ST_App1. apply ST_AppAbs. auto.
   - simpl. eapply multi_step.
     + apply ST_AppAbs. auto.
     + simpl. eapply multi_step.
       * apply ST_IfTrue.
-      * apply multi_refl.  Qed.
+      * apply multi_refl.   *)
+Qed.
 
 (** Example:
 
@@ -837,13 +845,19 @@ Inductive has_type : context -> tm -> ty -> Prop :=
 where "<{ Gamma '|--' t '\in' T }>" := (has_type Gamma t T) : stlc_scope.
 
 Hint Constructors has_type : core.
+(* eauto using has_type을 매번 안해도 되게 *)
 
 (* ================================================================= *)
 (** ** Examples *)
 
 Example typing_example_1 :
   <{ empty |-- \x:Bool, x \in Bool -> Bool }>.
-Proof. eauto. Qed.
+Proof. 
+  (* eauto using has_type. *)
+  eapply T_Abs.
+  eapply T_Var.
+  apply t_update_eq.
+Qed.
 
 (** Note that, since we added the [has_type] constructors to the hints
     database, [auto] can actually solve this one immediately. *)
@@ -864,7 +878,7 @@ Example typing_example_2 :
        \y:Bool->Bool,
           (y (y x)) \in
     Bool -> (Bool -> Bool) -> Bool }>.
-Proof. eauto 20. Qed.
+Proof. eauto 8. Qed.
 
 (** **** Exercise: 2 stars, standard, optional (typing_example_2_full)
 

@@ -9,6 +9,7 @@ Set Default Goal Selector "!".
 Module STLCProp.
 Import STLC.
 
+
 (** In this chapter, we develop the fundamental theory of the Simply
     Typed Lambda Calculus -- in particular, the type safety
     theorem. *)
@@ -101,7 +102,7 @@ Theorem progress : forall t T,
           [ST_If]). *)
 Proof with eauto.
   intros t T Ht.
-  remember empty as Gamma.
+  remember empty as Gamma. (* 왜 하필 empty를 기억? empty는 이름이 아니기 때문 *)
   induction Ht; subst Gamma; auto.
   (* auto solves all three cases in which t is a value *)
   - (* T_Var *)
@@ -439,6 +440,8 @@ Definition manual_grade_for_subject_expansion_stlc : option (nat*string) := None
     Put progress and preservation together and show that a well-typed
     term can _never_ reach a stuck state.  *)
 
+
+
 Definition stuck (t:tm) : Prop :=
   (normal_form step) t /\ ~ value t.
 
@@ -464,7 +467,7 @@ Proof.
 Theorem unique_types : forall Gamma e T T',
   <{ Gamma |-- e \in T }> ->
   <{ Gamma |-- e \in T' }> ->
-  T = T'.
+  T = T'. (* \lambda x.x 같은 건 안 됨. \lambda x:T.x *)
 Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
@@ -475,6 +478,7 @@ Proof.
 (** Another standard technical lemma associated with typed languages
     is _context invariance_. It states that typing is preserved under
     "inessential changes" to the context [Gamma] -- in particular,
+    
     changes that do not affect any of the free variables of the
     term. In this section, we establish this property for our system,
     introducing some other standard terminology on the way.  *)

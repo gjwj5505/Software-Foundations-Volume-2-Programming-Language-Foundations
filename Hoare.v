@@ -1621,10 +1621,32 @@ Theorem if_minus_plus :
     end
   {{Y = X + Z}}.
 Proof.
-  apply hoare_if; 
+  eapply hoare_consequence_pre.
+  - eapply hoare_if.
+    + (* then *)
+      eapply hoare_consequence_pre.
+      * eapply hoare_asgn.
+      * assertion_auto''.
+    + (* else *) 
+      simpl. eapply hoare_consequence_pre.
+      * eapply hoare_asgn.
+      * assertion_auto''.
+  - 
+    unfold "->>", assertion_sub, t_update, bassertion.
+    intros; simpl in *.
+    try rewrite -> eqb_eq in *.
+    try rewrite -> leb_le in *.
+    auto.
+    Unshelve.
+    + apply O.
+    + apply S. apply S. apply S. apply S. apply O.  
+
+    
+  (* apply hoare_if; 
   eapply hoare_consequence_pre; 
-  try apply hoare_asgn; try assertion_auto''.
+  try apply hoare_asgn; try assertion_auto''. *)
 Qed.
+
 (** [] *)
 
 (* ----------------------------------------------------------------- *)
@@ -1891,7 +1913,8 @@ Proof.
   - inversion Horig; subst; clear Horig.
   - inversion Horig; subst; clear Horig.
   - inversion Horig; subst; clear Horig. eauto.
-  - inversion Horig; subst; clear Horig. eauto.
+  - (* while true *)
+    inversion Horig; subst; clear Horig. eauto.
     (* try (inversion Horig; subst; clear Horig);
     eauto. *)
 Qed.
@@ -2104,36 +2127,45 @@ Qed.
 
 (* FILL IN HERE *)
 
+
+(* Theorem hoare_while : forall P (b:bexp) c,
+  {{P /\ b}} c {{P}} ->
+  {{P}} while b do c end {{P /\ ~ b}}. *)
+  
+
+
 Theorem hoare_repeat : forall P Q (b:bexp) c,
   {{P}} c {{Q}} ->
   {{Q /\ ~b}} c {{Q}} ->
   {{P}} repeat c until b end {{Q /\ b}}.
 Proof.
-  intros.
-  remember <{repeat c until b end}> as original_command eqn:Horig.
+  intros P Q b c Hc1 Hc2.
+  remember <{repeat c until b end}> as rcmd eqn:Heq.
   intros st st'' Hrep HP.
-  induction Hrep.
-  - discriminate.
-  - discriminate.
-  - discriminate.
-  - discriminate.
-  - discriminate.
-  - discriminate.
-  - discriminate.
+  induction Hrep; inversion Heq; subst; clear Heq.
   - (*repeat false*)
-    clear IHHrep1.
-    inversion Horig. subst. clear Horig.
-    admit.
+    assert (repeat_end : forall st st', 
+    st =[ repeat c until b end ]=> st' ->
+    Q st -> 
+    beval st b = false -> 
+    Q st' /\ beval st' b = true).
+    {
+      intros ST ST' HrepST HQST HbSTF.
+      remember <{repeat c until b end}> as original_command eqn:Horig.
+      induction HrepST; inversion Horig; subst; clear Horig; eauto.
+    }
+    eapply repeat_end.
+    + eapply Hrep2.
+    + eauto.
+    + assumption.
   - (*repeat true*)
-    inversion Horig. subst. clear Horig. eauto.
-      
-    
+    eauto.
   (* | E_RepeatFalse : forall st st' st'' b c,
       st  =[ c ]=> st' ->
       beval st' b = false ->
       st' =[ repeat c until b end ]=> st'' ->
       st  =[ repeat c until b end ]=> st'' *)
-Admitted.
+Qed.
 
 (** For full credit, make sure (informally) that your rule can be used
     to prove the following valid Hoare triple:
@@ -2299,13 +2331,17 @@ Proof. eauto. Qed.
 (** Complete the Hoare rule for [HAVOC] commands below by defining
     [havoc_pre], and prove that the resulting rule is correct. *)
 
-Definition havoc_pre (X : string) (Q : Assertion) (st : total_map nat) : Prop
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+Definition havoc_pre (X : string) (Q : Assertion) (st : total_map nat) : Prop :=
+  forall n:nat, Q (X !-> n; st).
 
 Theorem hoare_havoc : forall (Q : Assertion) (X : string),
   {{ $(havoc_pre X Q) }} havoc X {{ Q }}.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  intros st st' Hhavoc Hpre.
+  inversion Hhavoc. subst. clear Hhavoc.
+  unfold havoc_pre in Hpre. apply Hpre.
+Qed.
 (** [] *)
 
 (** **** Exercise: 3 stars, advanced (havoc_post)
@@ -2323,7 +2359,13 @@ Theorem havoc_post : forall (P : Assertion) (X : string),
 Proof.
   intros P X. eapply hoare_consequence_pre.
   - apply hoare_havoc.
-  - (* FILL IN HERE *) Admitted.
+  - unfold "->>". intros st HP n.
+    exists (st X).
+    unfold assertion_sub. simpl.
+    rewrite t_update_shadow.
+    rewrite t_update_same.
+    eauto.
+Qed.
 
 (** [] *)
 
@@ -2463,7 +2505,33 @@ Notation "{{ P }} c {{ Q }}" :=
 Theorem assert_assume_differ : exists (P:Assertion) b (Q:Assertion),
        ({{P}} assume b {{Q}})
   /\ ~ ({{P}} assert b {{Q}}).
-(* FILL IN HERE *) Admitted.
+Proof.
+  exists True.
+  exists <{X = 1}>.
+  exists True.
+  split.
+  - intros st res Hassume HP.
+    exists (X !-> 1; st).
+    inversion Hassume. subst. clear Hassume.
+    split.
+    + f_equal. replace (1) with (st X).
+      -- rewrite t_update_same. easy.
+      -- simpl in H0. apply Nat.eqb_eq in H0. eauto.
+    + simpl. easy.
+  - intros contra.
+    unfold valid_hoare_triple in contra.
+    specialize contra with (st := (X !-> 2)) (r := RError).
+    assert ((X !-> 2) =[ assert (X = 1) ]=> RError).
+    {
+      apply E_AssertFalse.
+      simpl. easy. 
+    }
+    apply contra in H.
+    + destruct H.
+      destruct H.
+      discriminate.
+    + simpl. easy.
+Qed.
 
 (** Then prove that any triple for an [assert] also works when
     [assert] is replaced by [assume]. *)
@@ -2472,7 +2540,25 @@ Theorem assert_implies_assume : forall P b Q,
      ({{P}} assert b {{Q}})
   -> ({{P}} assume b {{Q}}).
 Proof.
-(* FILL IN HERE *) Admitted.
+  intros P b Q Hassert st r Hassume HP.
+  exists st.
+  unfold valid_hoare_triple in Hassert.
+  specialize Hassert with (st := st) (r := r).
+  inversion Hassume; subst; clear Hassume.
+  assert (st =[ assert b ]=> RNormal st).
+  {
+    apply E_AssertTrue. assumption. 
+  }
+  assert (exists st' : state, RNormal st = RNormal st' /\ Q st').
+  {
+    apply Hassert.
+    - assumption.
+    - assumption. 
+  }
+  destruct H1. destruct H1.
+  inversion H1. subst.
+  eauto.
+Qed.
 
 (** Next, here are proofs for the old hoare rules adapted to the new
     semantics.  You don't need to do anything with these. *)
@@ -2597,16 +2683,43 @@ Qed.
 
 (* FILL IN HERE *)
 
+
+Theorem hoare_assert : forall P (b:bexp),
+  {{P /\ b}} assert b {{P /\ b}}.
+Proof.
+  intros.
+  intros st r Hassert HP.
+  exists st.
+  inversion Hassert; subst; clear Hassert.
+  - eauto.
+  - destruct HP.
+    rewrite H1 in H0. discriminate.
+Qed.
+
+Theorem hoare_assume : forall P (b:bexp),
+  {{P}} assume b {{P /\ b}}.
+Proof.
+  intros.
+  intros st r Hassume HP.
+  exists st.
+  inversion Hassume; subst; clear Hassume.
+  eauto.
+Qed.
+
 (** Use your rules to prove the following triple. *)
 
-Example assert_assume_example:
+(* Example assert_assume_example:
   {{True}}
     assume (X = 1);
     X := X + 1;
     assert (X = 2)
   {{True}}.
 Proof.
-(* FILL IN HERE *) Admitted.
+  eapply hoare_seq.
+  - eapply hoare_seq.
+    + eapply hoare_assert.
+  -
+Qed. *)
 
 End HoareAssertAssume.
 (** [] *)
