@@ -345,10 +345,11 @@ Proof.
       eapply hoare_consequence_pre.
       * apply hoare_asgn.
       * (* Proving trivial implication (2) ->> (3) *)
+        (* assertion_auto. *)
         unfold assertion_sub, "->>". simpl. intros.
         exact I.
   - (* Loop invariant and negated guard imply post *)
-    intros st [Inv GuardFalse].
+    intros st [_ GuardFalse].
     unfold bassertion in GuardFalse. simpl in GuardFalse.
     rewrite not_true_iff_false in GuardFalse.
     rewrite negb_false_iff in GuardFalse.
@@ -420,6 +421,7 @@ Proof.
       * verify_assertion.
   - verify_assertion.
 Qed.
+
 
 (** This example shows that it is conceptually straightforward to read
     off the main elements of a formal proof from a decorated program.
@@ -1790,7 +1792,9 @@ Qed.
 
 Lemma pow2_le_1 : forall n, pow2 n >= 1.
 Proof.
-  induction n; simpl; [constructor | lia].
+  induction n; simpl.
+  - constructor.
+  - lia.
 Qed.
 
 (** The main correctness theorem: *)
@@ -1831,7 +1835,11 @@ Lemma fib_eqn : forall n,
   n > 0 ->
   fib n + fib (pred n) = fib (1 + n).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  destruct n eqn:Dn.
+  - nia.
+  - simpl. reflexivity.
+Qed.
 (** [] *)
 
 (** **** Exercise: 4 stars, advanced, optional (fib)
@@ -2003,7 +2011,21 @@ Definition is_wp P c Q :=
 Theorem is_wp_example :
   is_wp ({{ Y <= 4 }}) (<{X := Y + 1}>) ({{ X <= 5 }}).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  unfold is_wp.
+  split.
+  - eapply hoare_consequence_pre.
+    + eapply hoare_asgn.
+    + verify_assertion.
+  - intros P. intros.
+    verify_assertion.
+    unfold valid_hoare_triple in H.
+    specialize H with (st := st) (st' := (X !-> st Y + 1 ; st)).
+    assert (st =[ X := Y + 1 ]=> (X !-> st Y + 1; st)).
+    + apply E_Asgn. simpl. easy.
+    + apply H in H1.
+      -- rewrite t_update_eq in H1. lia.
+      -- assumption. 
+Qed.
 (** [] *)
 
 (** **** Exercise: 2 stars, advanced, optional (hoare_asgn_weakest)
@@ -2014,7 +2036,19 @@ Proof.
 Theorem hoare_asgn_weakest : forall Q X a,
   is_wp ({{ Q [X |-> a] }}) <{ X := a }> Q.
 Proof.
-(* FILL IN HERE *) Admitted.
+  intros.
+  split.
+  - eapply hoare_consequence_pre.
+    + eapply hoare_asgn.
+    + verify_assertion.
+  - intros P H.
+    verify_assertion.
+    unfold valid_hoare_triple in H.
+    specialize H with (st := st) (st' := (X !-> aeval st a ; st)).
+    assert (st =[ X := a ]=> (X !-> aeval st a; st)).
+    + apply E_Asgn. reflexivity.
+    + eauto.
+Qed.
 (** [] *)
 
 (** **** Exercise: 2 stars, advanced, optional (hoare_havoc_weakest)
@@ -2028,7 +2062,16 @@ Lemma hoare_havoc_weakest : forall (P Q : Assertion) (X : string),
   {{ P }} havoc X {{ Q }} ->
   P ->> havoc_pre X Q.
 Proof.
-(* FILL IN HERE *) Admitted.
+  intros.
+  verify_assertion.
+  unfold havoc_pre.
+  intros.
+  unfold valid_hoare_triple in H.
+  specialize H with (st := st) (st' := (X !-> n ; st)).
+  assert (st =[ havoc X ]=> (X !-> n; st)).
+  - apply E_Havoc.
+  - eauto.
+Qed.
 End Himp2.
 (** [] *)
 

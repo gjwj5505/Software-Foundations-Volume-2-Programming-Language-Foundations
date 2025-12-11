@@ -27,7 +27,6 @@ Ltac print_manual_grade A :=
 
 End Check.
 
-From PLF Require Import Hoare.
 Import Check.
 
 Goal True.
@@ -333,6 +332,7 @@ idtac " ".
 
 idtac "-------------------  assert_vs_assume  --------------------".
 idtac " ".
+
 
 idtac "#> HoareAssertAssume.assert_assume_differ".
 idtac "Possible points: 1".

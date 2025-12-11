@@ -203,7 +203,8 @@ Example test_step_2 :
           (C 2)
           (C 4)).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  apply ST_Plus2. apply ST_Plus2. apply ST_PlusConstConst.
+Qed.
 (** [] *)
 
 End SimpleArith1.
@@ -328,6 +329,7 @@ Ltac solve_by_inverts n :=
 
 Ltac solve_by_invert :=
   solve_by_inverts 1.
+
 
 (** The proof of the previous theorem can now be simplified... *)
 
@@ -464,7 +466,24 @@ Inductive step : tm -> tm -> Prop :=
 Theorem step_deterministic :
   deterministic step.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  unfold deterministic.
+  intros x y1 y2 H1 H2.
+  generalize dependent y2.
+  induction H1; intros y2 H2.
+  - inversion H2; subst; clear H2.
+    + reflexivity.
+    + inversion H3; subst; clear H3.
+    + inversion H4; subst; clear H4.
+  - inversion H2; subst; clear H2.
+    + inversion H1; subst; clear H1.
+    + apply IHstep in H4. subst. reflexivity.
+    + solve_by_inverts 2.
+  - inversion H; subst; clear H.
+    inversion H2; subst; clear H2.
+    + solve_by_invert.
+    + solve_by_invert.
+    + apply IHstep in H5. subst. reflexivity.
+Qed.
 (** [] *)
 
 (* ================================================================= *)

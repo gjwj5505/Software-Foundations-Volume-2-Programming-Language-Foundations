@@ -1,0 +1,886 @@
+DIGEST 5af1a5595897a0e997b5ee4b90648caa
+FPLF.SFImp
+R887:890 Stdlib.Bool.Bool <> <> lib
+R920:927 Stdlib.Init.Nat <> <> lib
+R957:961 Stdlib.Arith.Arith <> <> lib
+R991:995 Stdlib.Arith.EqNat <> <> lib
+R1005:1007 Stdlib.Arith.PeanoNat Nat <> mod
+R1037:1039 Stdlib.micromega.Lia <> <> lib
+R1069:1072 Stdlib.Lists.List <> <> lib
+R1082:1094 Stdlib.Lists.List ListNotations <> mod
+R1124:1137 Stdlib.Strings.String <> <> lib
+R1164:1167 PLF.Maps <> <> lib
+R1194:1200 PLF.SFArray <> <> lib
+def 1246:1250 <> state
+R1255:1263 PLF.Maps <> total_map def
+R1265:1267 Corelib.Init.Datatypes <> nat ind
+ind 1491:1494 <> aexp
+constr 1510:1513 <> ANum
+constr 1529:1531 <> AId
+constr 1578:1582 <> APlus
+constr 1603:1608 <> AMinus
+constr 1629:1633 <> AMult
+constr 1654:1657 <> AGet
+constr 1677:1680 <> ASet
+R1520:1522 Corelib.Init.Datatypes <> nat ind
+binder 1516:1516 <> n:3
+R1538:1543 Stdlib.Strings.String <> string ind
+binder 1534:1534 <> x:4
+R1593:1596 PLF.SFImp <> aexp:1 ind
+binder 1585:1586 <> a1:5
+binder 1588:1589 <> a2:6
+R1619:1622 PLF.SFImp <> aexp:1 ind
+binder 1611:1612 <> a1:7
+binder 1614:1615 <> a2:8
+R1644:1647 PLF.SFImp <> aexp:1 ind
+binder 1636:1637 <> a1:9
+binder 1639:1640 <> a2:10
+R1667:1670 PLF.SFImp <> aexp:1 ind
+binder 1660:1661 <> a1:11
+binder 1663:1664 <> a2:12
+R1693:1696 PLF.SFImp <> aexp:1 ind
+binder 1683:1684 <> a1:13
+binder 1686:1687 <> a2:14
+binder 1689:1690 <> a3:15
+scheme 1491:1494 <> aexp_rect
+scheme 1491:1494 <> aexp_ind
+scheme 1491:1494 <> aexp_rec
+scheme 1491:1494 <> aexp_sind
+ind 1710:1717 <> aexp_div
+constr 1733:1736 <> AExp
+constr 1752:1755 <> ADiv
+R1742:1745 PLF.SFImp <> aexp ind
+binder 1739:1739 <> a:18
+R1766:1769 PLF.SFImp <> aexp ind
+binder 1758:1759 <> a1:19
+binder 1761:1762 <> a2:20
+R1775:1806 PLF.SFImp <> AExp constr
+def 1923:1923 <> W
+R1927:1932 Stdlib.Strings.String <> string ind
+def 1953:1953 <> X
+R1957:1962 Stdlib.Strings.String <> string ind
+def 1983:1983 <> Y
+R1987:1992 Stdlib.Strings.String <> string ind
+def 2013:2013 <> Z
+R2017:2022 Stdlib.Strings.String <> string ind
+ind 2415:2418 <> bexp
+constr 2434:2438 <> BTrue
+constr 2444:2449 <> BFalse
+constr 2455:2457 <> BEq
+constr 2478:2481 <> BNeq
+constr 2502:2504 <> BLe
+constr 2525:2527 <> BGt
+constr 2548:2551 <> BNot
+constr 2568:2571 <> BAnd
+R2468:2471 PLF.SFImp <> aexp ind
+binder 2460:2461 <> a1:23
+binder 2463:2464 <> a2:24
+R2492:2495 PLF.SFImp <> aexp ind
+binder 2484:2485 <> a1:25
+binder 2487:2488 <> a2:26
+R2515:2518 PLF.SFImp <> aexp ind
+binder 2507:2508 <> a1:27
+binder 2510:2511 <> a2:28
+R2538:2541 PLF.SFImp <> aexp ind
+binder 2530:2531 <> a1:29
+binder 2533:2534 <> a2:30
+R2558:2561 PLF.SFImp <> bexp:21 ind
+binder 2554:2554 <> b:31
+R2582:2585 PLF.SFImp <> bexp:21 ind
+binder 2574:2575 <> b1:32
+binder 2577:2578 <> b2:33
+scheme 2415:2418 <> bexp_rect
+scheme 2415:2418 <> bexp_ind
+scheme 2415:2418 <> bexp_rec
+scheme 2415:2418 <> bexp_sind
+R3839:3868 PLF.SFImp <> AId constr
+R3871:3898 PLF.SFImp <> ANum constr
+not 3993:3993 <> ::com_scope:'<{'_x_'}>'
+not 4049:4049 <> :com_aux:com_scope:x
+not 4126:4126 <> :com:com_scope:'('_x_')'
+not 4192:4192 <> :com:com_scope:x
+not 4272:4272 <> :com:com_scope:x_x_'..'_x
+R4500:4504 PLF.SFImp <> APlus constr
+not 4486:4486 <> :com::x_'+'_x
+R4583:4588 PLF.SFImp <> AMinus constr
+not 4569:4569 <> :com::x_'-'_x
+R4667:4671 PLF.SFImp <> AMult constr
+not 4653:4653 <> :com::x_'*'_x
+R4750:4753 PLF.SFImp <> ADiv constr
+not 4736:4736 <> :com::x_'/'_x
+R4830:4833 PLF.SFImp <> AGet constr
+not 4818:4818 <> :com::x_'@'_x
+R4925:4928 PLF.SFImp <> ASet constr
+not 4898:4898 <> :com::x_'<|'_x_'~>'_x_'|>'
+R5008:5011 Corelib.Init.Datatypes <> true constr
+not 4995:4995 <> :::'true'
+R5049:5053 PLF.SFImp <> BTrue constr
+not 5036:5036 <> :com::'true'
+R5105:5109 Corelib.Init.Datatypes <> false constr
+not 5092:5092 <> :::'false'
+R5147:5152 PLF.SFImp <> BFalse constr
+not 5134:5134 <> :com::'false'
+R5205:5207 PLF.SFImp <> BLe constr
+not 5191:5191 <> :com::x_'<='_x
+R5284:5286 PLF.SFImp <> BGt constr
+not 5270:5270 <> :com::x_'>'_x
+R5363:5365 PLF.SFImp <> BEq constr
+not 5349:5349 <> :com::x_'='_x
+R5442:5445 PLF.SFImp <> BNeq constr
+not 5428:5428 <> :com::x_'<>'_x
+R5522:5525 PLF.SFImp <> BAnd constr
+not 5508:5508 <> :com::x_'&&'_x
+R5604:5607 PLF.SFImp <> BNot constr
+not 5590:5590 <> :com::'~'_x
+R5686:5688 PLF.SFImp <> BGt constr
+not 5672:5672 <> :com::x_'<'_x
+R5765:5767 PLF.SFImp <> BLe constr
+not 5751:5751 <> :com::x_'>='_x
+R5844:5847 PLF.SFImp <> BNot constr
+R5850:5853 PLF.SFImp <> BAnd constr
+R5856:5859 PLF.SFImp <> BNot constr
+R5865:5868 PLF.SFImp <> BNot constr
+not 5830:5830 <> :com::x_'||'_x
+def 6100:6111 <> example_aexp
+R6115:6118 PLF.SFImp <> aexp ind
+R6123:6125 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R6137:6139 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R6127:6129 PLF.SFImp <> :com::x_'+'_x not
+R6130:6130 PLF.SFImp <> :com:com_scope:'('_x_')' not
+R6136:6136 PLF.SFImp <> :com:com_scope:'('_x_')' not
+R6132:6134 PLF.SFImp <> :com::x_'*'_x not
+R6131:6131 PLF.SFImp <> X def
+def 6153:6164 <> example_bexp
+R6168:6171 PLF.SFImp <> bexp ind
+R6176:6178 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R6196:6198 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R6183:6186 PLF.SFImp <> :com::x_'&&'_x not
+R6179:6182 PLF.SFImp <> :com::'true' not
+R6187:6187 PLF.SFImp <> :com::'~'_x not
+R6188:6188 PLF.SFImp <> :com:com_scope:'('_x_')' not
+R6195:6195 PLF.SFImp <> :com:com_scope:'('_x_')' not
+R6190:6193 PLF.SFImp <> :com::x_'<='_x not
+R6189:6189 PLF.SFImp <> X def
+def 6212:6224 <> example_aexp2
+R6228:6231 PLF.SFImp <> aexp ind
+R6236:6238 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R6250:6252 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R6240:6242 PLF.SFImp <> :com::x_'@'_x not
+R6239:6239 PLF.SFImp <> X def
+R6243:6243 PLF.SFImp <> :com:com_scope:'('_x_')' not
+R6249:6249 PLF.SFImp <> :com:com_scope:'('_x_')' not
+R6245:6247 PLF.SFImp <> :com::x_'+'_x not
+R6244:6244 PLF.SFImp <> Y def
+def 6266:6278 <> example_aexp3
+R6282:6285 PLF.SFImp <> aexp ind
+R6290:6292 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R6307:6309 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R6294:6297 PLF.SFImp <> :com::x_'<|'_x_'~>'_x_'|>' not
+R6299:6302 PLF.SFImp <> :com::x_'<|'_x_'~>'_x_'|>' not
+R6304:6306 PLF.SFImp <> :com::x_'<|'_x_'~>'_x_'|>' not
+R6293:6293 PLF.SFImp <> X def
+R6298:6298 PLF.SFImp <> Y def
+R6303:6303 PLF.SFImp <> Z def
+def 6568:6572 <> aeval
+R6580:6584 PLF.SFImp <> state def
+binder 6575:6576 <> st:34
+R6622:6625 PLF.SFImp <> aexp ind
+binder 6618:6618 <> a:35
+R6630:6632 Corelib.Init.Datatypes <> nat ind
+R6645:6645 PLF.SFImp <> a:35 var
+R6656:6659 PLF.SFImp <> ANum constr
+R6672:6674 PLF.SFImp <> AId constr
+R6681:6682 PLF.SFImp <> st:34 var
+R6736:6737 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R6745:6746 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R6740:6742 PLF.SFImp <> :com::x_'+'_x not
+R6751:6751 Corelib.Init.Nat <> ::nat_scope:x_'+'_x not
+R6763:6767 Corelib.Init.Nat <> ::nat_scope:x_'+'_x not
+R6779:6779 Corelib.Init.Nat <> ::nat_scope:x_'+'_x not
+R6752:6756 PLF.SFImp <> aeval:36 def
+R6758:6759 PLF.SFImp <> st:34 var
+R6768:6772 PLF.SFImp <> aeval:36 def
+R6774:6775 PLF.SFImp <> st:34 var
+R6785:6786 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R6794:6795 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R6789:6791 PLF.SFImp <> :com::x_'-'_x not
+R6800:6800 Corelib.Init.Nat <> ::nat_scope:x_'-'_x not
+R6812:6816 Corelib.Init.Nat <> ::nat_scope:x_'-'_x not
+R6828:6828 Corelib.Init.Nat <> ::nat_scope:x_'-'_x not
+R6801:6805 PLF.SFImp <> aeval:36 def
+R6807:6808 PLF.SFImp <> st:34 var
+R6817:6821 PLF.SFImp <> aeval:36 def
+R6823:6824 PLF.SFImp <> st:34 var
+R6834:6835 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R6843:6844 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R6838:6840 PLF.SFImp <> :com::x_'*'_x not
+R6849:6849 Corelib.Init.Nat <> ::nat_scope:x_'*'_x not
+R6861:6865 Corelib.Init.Nat <> ::nat_scope:x_'*'_x not
+R6877:6877 Corelib.Init.Nat <> ::nat_scope:x_'*'_x not
+R6850:6854 PLF.SFImp <> aeval:36 def
+R6856:6857 PLF.SFImp <> st:34 var
+R6866:6870 PLF.SFImp <> aeval:36 def
+R6872:6873 PLF.SFImp <> st:34 var
+R6883:6885 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R6891:6893 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R6887:6889 PLF.SFImp <> :com::x_'@'_x not
+R6898:6906 PLF.SFArray <> array_get def
+R6909:6913 PLF.SFImp <> aeval:36 def
+R6918:6918 PLF.SFImp <> a:35 var
+R6915:6916 PLF.SFImp <> st:34 var
+R6922:6926 PLF.SFImp <> aeval:36 def
+R6928:6929 PLF.SFImp <> st:34 var
+R6938:6940 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R6955:6957 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R6942:6945 PLF.SFImp <> :com::x_'<|'_x_'~>'_x_'|>' not
+R6947:6950 PLF.SFImp <> :com::x_'<|'_x_'~>'_x_'|>' not
+R6952:6954 PLF.SFImp <> :com::x_'<|'_x_'~>'_x_'|>' not
+R6962:6970 PLF.SFArray <> array_set def
+R6973:6977 PLF.SFImp <> aeval:36 def
+R6982:6982 PLF.SFImp <> a:35 var
+R6979:6980 PLF.SFImp <> st:34 var
+R6986:6990 PLF.SFImp <> aeval:36 def
+R6992:6993 PLF.SFImp <> st:34 var
+R6999:7003 PLF.SFImp <> aeval:36 def
+R7005:7006 PLF.SFImp <> st:34 var
+def 7030:7038 <> aeval_div
+binder 7040:7041 <> st:38
+binder 7043:7043 <> a:39
+R7047:7049 Corelib.Init.Datatypes <> nat ind
+R7062:7062 PLF.SFImp <> a:39 var
+R7073:7076 PLF.SFImp <> AExp constr
+R7084:7088 PLF.SFImp <> aeval def
+R7090:7091 PLF.SFImp <> st:38 var
+R7100:7103 PLF.SFImp <> ADiv constr
+R7125:7127 Corelib.Init.Nat <> ::nat_scope:x_'/'_x not
+R7114:7118 PLF.SFImp <> aeval def
+R7120:7121 PLF.SFImp <> st:38 var
+R7128:7132 PLF.SFImp <> aeval def
+R7134:7135 PLF.SFImp <> st:38 var
+def 7159:7173 <> aeval_div_error
+binder 7175:7176 <> st:41
+binder 7178:7178 <> a:42
+R7198:7198 PLF.SFImp <> a:42 var
+R7209:7212 PLF.SFImp <> AExp constr
+R7219:7223 Corelib.Init.Logic <> False ind
+R7229:7232 PLF.SFImp <> ADiv constr
+R7254:7256 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7243:7247 PLF.SFImp <> aeval def
+R7249:7250 PLF.SFImp <> st:41 var
+def 7276:7280 <> beval
+R7288:7292 PLF.SFImp <> state def
+binder 7283:7284 <> st:44
+R7330:7333 PLF.SFImp <> bexp ind
+binder 7326:7326 <> b:45
+R7338:7341 Corelib.Init.Datatypes <> bool ind
+R7354:7354 PLF.SFImp <> b:45 var
+R7365:7366 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R7371:7372 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R7367:7370 PLF.SFImp <> :com::'true' not
+R7382:7385 PLF.SFImp <> :::'true' not
+R7391:7392 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R7398:7399 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R7393:7397 PLF.SFImp <> :com::'false' not
+R7408:7412 PLF.SFImp <> :::'false' not
+R7418:7419 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R7427:7428 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R7422:7424 PLF.SFImp <> :com::x_'='_x not
+R7435:7435 Corelib.Init.Nat <> ::nat_scope:x_'=?'_x not
+R7447:7452 Corelib.Init.Nat <> ::nat_scope:x_'=?'_x not
+R7464:7464 Corelib.Init.Nat <> ::nat_scope:x_'=?'_x not
+R7436:7440 PLF.SFImp <> aeval def
+R7442:7443 PLF.SFImp <> st:44 var
+R7453:7457 PLF.SFImp <> aeval def
+R7459:7460 PLF.SFImp <> st:44 var
+R7470:7471 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R7480:7481 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R7474:7477 PLF.SFImp <> :com::x_'<>'_x not
+R7487:7490 Corelib.Init.Datatypes <> negb def
+R7493:7493 Corelib.Init.Nat <> ::nat_scope:x_'=?'_x not
+R7505:7510 Corelib.Init.Nat <> ::nat_scope:x_'=?'_x not
+R7522:7522 Corelib.Init.Nat <> ::nat_scope:x_'=?'_x not
+R7494:7498 PLF.SFImp <> aeval def
+R7500:7501 PLF.SFImp <> st:44 var
+R7511:7515 PLF.SFImp <> aeval def
+R7517:7518 PLF.SFImp <> st:44 var
+R7529:7530 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R7539:7540 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R7533:7536 PLF.SFImp <> :com::x_'<='_x not
+R7546:7546 Corelib.Init.Nat <> ::nat_scope:x_'<=?'_x not
+R7558:7564 Corelib.Init.Nat <> ::nat_scope:x_'<=?'_x not
+R7576:7576 Corelib.Init.Nat <> ::nat_scope:x_'<=?'_x not
+R7547:7551 PLF.SFImp <> aeval def
+R7553:7554 PLF.SFImp <> st:44 var
+R7565:7569 PLF.SFImp <> aeval def
+R7571:7572 PLF.SFImp <> st:44 var
+R7582:7583 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R7591:7592 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R7586:7588 PLF.SFImp <> :com::x_'>'_x not
+R7599:7602 Corelib.Init.Datatypes <> negb def
+R7605:7605 Corelib.Init.Nat <> ::nat_scope:x_'<=?'_x not
+R7617:7623 Corelib.Init.Nat <> ::nat_scope:x_'<=?'_x not
+R7635:7635 Corelib.Init.Nat <> ::nat_scope:x_'<=?'_x not
+R7606:7610 PLF.SFImp <> aeval def
+R7612:7613 PLF.SFImp <> st:44 var
+R7624:7628 PLF.SFImp <> aeval def
+R7630:7631 PLF.SFImp <> st:44 var
+R7642:7643 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R7648:7649 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R7644:7645 PLF.SFImp <> :com::'~'_x not
+R7659:7662 Corelib.Init.Datatypes <> negb def
+R7665:7669 PLF.SFImp <> beval:46 def
+R7671:7672 PLF.SFImp <> st:44 var
+R7682:7683 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R7692:7693 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R7686:7689 PLF.SFImp <> :com::x_'&&'_x not
+R7699:7702 Corelib.Init.Datatypes <> andb def
+R7719:7723 PLF.SFImp <> beval:46 def
+R7725:7726 PLF.SFImp <> st:44 var
+R7705:7709 PLF.SFImp <> beval:46 def
+R7711:7712 PLF.SFImp <> st:44 var
+def 7883:7890 <> empty_st
+R7896:7901 PLF.Maps <> :::'''_'''_'!->'_x not
+R8037:8041 PLF.Maps <> :::x_'!->'_x_';'_x not
+R8043:8045 PLF.Maps <> :::x_'!->'_x_';'_x not
+R8046:8053 PLF.SFImp <> empty_st def
+not 8020:8020 <> :::x_'!->'_x
+def 8097:8101 <> aexp1
+R8142:8146 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8109:8113 PLF.SFImp <> aeval def
+R8117:8121 PLF.SFImp <> :::x_'!->'_x not
+R8116:8116 PLF.SFImp <> X def
+R8125:8127 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R8139:8141 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R8129:8131 PLF.SFImp <> :com::x_'+'_x not
+R8132:8132 PLF.SFImp <> :com:com_scope:'('_x_')' not
+R8138:8138 PLF.SFImp <> :com:com_scope:'('_x_')' not
+R8134:8136 PLF.SFImp <> :com::x_'*'_x not
+R8133:8133 PLF.SFImp <> X def
+def 8184:8188 <> aexp2
+R8239:8243 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8196:8200 PLF.SFImp <> aeval def
+R8204:8208 PLF.Maps <> :::x_'!->'_x_';'_x not
+R8210:8212 PLF.Maps <> :::x_'!->'_x_';'_x not
+R8214:8218 PLF.SFImp <> :::x_'!->'_x not
+R8213:8213 PLF.SFImp <> Y def
+R8203:8203 PLF.SFImp <> X def
+R8222:8224 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R8236:8238 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R8226:8228 PLF.SFImp <> :com::x_'+'_x not
+R8225:8225 PLF.SFImp <> Z def
+R8229:8229 PLF.SFImp <> :com:com_scope:'('_x_')' not
+R8235:8235 PLF.SFImp <> :com:com_scope:'('_x_')' not
+R8231:8233 PLF.SFImp <> :com::x_'*'_x not
+R8230:8230 PLF.SFImp <> X def
+R8234:8234 PLF.SFImp <> Y def
+def 8282:8286 <> bexp1
+R8333:8337 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8294:8298 PLF.SFImp <> beval def
+R8302:8306 PLF.SFImp <> :::x_'!->'_x not
+R8301:8301 PLF.SFImp <> X def
+R8310:8312 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R8330:8332 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R8317:8320 PLF.SFImp <> :com::x_'&&'_x not
+R8313:8316 PLF.SFImp <> :com::'true' not
+R8321:8321 PLF.SFImp <> :com::'~'_x not
+R8322:8322 PLF.SFImp <> :com:com_scope:'('_x_')' not
+R8329:8329 PLF.SFImp <> :com:com_scope:'('_x_')' not
+R8324:8327 PLF.SFImp <> :com::x_'<='_x not
+R8323:8323 PLF.SFImp <> X def
+R8338:8341 PLF.SFImp <> :::'true' not
+ind 8929:8931 <> com
+constr 8947:8951 <> CSkip
+constr 8957:8961 <> CAsgn
+constr 8995:8998 <> CSeq
+constr 9018:9020 <> CIf
+constr 9051:9056 <> CWhile
+R8968:8973 Stdlib.Strings.String <> string ind
+binder 8964:8964 <> x:50
+R8981:8988 PLF.SFImp <> aexp_div variant
+binder 8977:8977 <> a:51
+R9009:9011 PLF.SFImp <> com:48 ind
+binder 9001:9002 <> c1:52
+binder 9004:9005 <> c2:53
+R9027:9030 PLF.SFImp <> bexp ind
+binder 9023:9023 <> b:54
+R9042:9044 PLF.SFImp <> com:48 ind
+binder 9034:9035 <> c1:55
+binder 9037:9038 <> c2:56
+R9063:9066 PLF.SFImp <> bexp ind
+binder 9059:9059 <> b:57
+R9074:9076 PLF.SFImp <> com:48 ind
+binder 9070:9070 <> c:58
+scheme 8929:8931 <> com_rect
+scheme 8929:8931 <> com_ind
+scheme 8929:8931 <> com_rec
+scheme 8929:8931 <> com_sind
+R9254:9258 PLF.SFImp <> CSkip constr
+not 9232:9232 <> :com:com_scope:'skip'
+R9332:9336 PLF.SFImp <> CAsgn constr
+not 9309:9309 <> :com:com_scope:x_':='_x
+R9495:9498 PLF.SFImp <> CSeq constr
+not 9474:9474 <> :com:com_scope:x_';'_x
+R9645:9647 PLF.SFImp <> CIf constr
+not 9599:9599 <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end'
+R9812:9817 PLF.SFImp <> CWhile constr
+not 9774:9774 <> :com:com_scope:'while'_x_'do'_x_'end'
+def 10137:10147 <> fact_in_coq
+R10151:10153 PLF.SFImp <> com ind
+R10160:10162 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R10250:10252 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R10169:10175 PLF.SFImp <> :com:com_scope:x_';'_x not
+R10164:10167 PLF.SFImp <> :com:com_scope:x_':='_x not
+R10163:10163 PLF.SFImp <> Z def
+R10168:10168 PLF.SFImp <> X def
+R10182:10188 PLF.SFImp <> :com:com_scope:x_';'_x not
+R10177:10180 PLF.SFImp <> :com:com_scope:x_':='_x not
+R10176:10176 PLF.SFImp <> Y def
+R10189:10194 PLF.SFImp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R10201:10211 PLF.SFImp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R10241:10249 PLF.SFImp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R10196:10199 PLF.SFImp <> :com::x_'<>'_x not
+R10195:10195 PLF.SFImp <> Z def
+R10222:10230 PLF.SFImp <> :com:com_scope:x_';'_x not
+R10213:10216 PLF.SFImp <> :com:com_scope:x_':='_x not
+R10212:10212 PLF.SFImp <> Y def
+R10218:10220 PLF.SFImp <> :com::x_'*'_x not
+R10217:10217 PLF.SFImp <> Y def
+R10221:10221 PLF.SFImp <> Z def
+R10232:10235 PLF.SFImp <> :com:com_scope:x_':='_x not
+R10231:10231 PLF.SFImp <> Z def
+R10237:10239 PLF.SFImp <> :com::x_'-'_x not
+R10236:10236 PLF.SFImp <> Z def
+def 13701:13705 <> plus2
+R13709:13711 PLF.SFImp <> com ind
+R13718:13720 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R13731:13733 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R13722:13725 PLF.SFImp <> :com:com_scope:x_':='_x not
+R13721:13721 PLF.SFImp <> X def
+R13727:13729 PLF.SFImp <> :com::x_'+'_x not
+R13726:13726 PLF.SFImp <> X def
+def 13748:13757 <> XtimesYinZ
+R13761:13763 PLF.SFImp <> com ind
+R13770:13772 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R13783:13785 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R13774:13777 PLF.SFImp <> :com:com_scope:x_':='_x not
+R13773:13773 PLF.SFImp <> Z def
+R13779:13781 PLF.SFImp <> :com::x_'*'_x not
+R13778:13778 PLF.SFImp <> X def
+R13782:13782 PLF.SFImp <> Y def
+def 13890:13909 <> subtract_slowly_body
+R13913:13915 PLF.SFImp <> com ind
+R13922:13924 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R13953:13955 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R13935:13942 PLF.SFImp <> :com:com_scope:x_';'_x not
+R13926:13929 PLF.SFImp <> :com:com_scope:x_':='_x not
+R13925:13925 PLF.SFImp <> Z def
+R13931:13933 PLF.SFImp <> :com::x_'-'_x not
+R13930:13930 PLF.SFImp <> Z def
+R13944:13947 PLF.SFImp <> :com:com_scope:x_':='_x not
+R13943:13943 PLF.SFImp <> X def
+R13949:13951 PLF.SFImp <> :com::x_'-'_x not
+R13948:13948 PLF.SFImp <> X def
+def 13970:13984 <> subtract_slowly
+R13988:13990 PLF.SFImp <> com ind
+R13997:13999 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R14052:14054 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R14000:14005 PLF.SFImp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R14012:14022 PLF.SFImp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R14043:14051 PLF.SFImp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R14007:14010 PLF.SFImp <> :com::x_'<>'_x not
+R14006:14006 PLF.SFImp <> X def
+R14023:14042 PLF.SFImp <> subtract_slowly_body def
+def 14069:14092 <> subtract_3_from_5_slowly
+R14096:14098 PLF.SFImp <> com ind
+R14105:14107 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R14151:14153 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R14114:14121 PLF.SFImp <> :com:com_scope:x_';'_x not
+R14109:14112 PLF.SFImp <> :com:com_scope:x_':='_x not
+R14108:14108 PLF.SFImp <> X def
+R14128:14135 PLF.SFImp <> :com:com_scope:x_';'_x not
+R14123:14126 PLF.SFImp <> :com:com_scope:x_':='_x not
+R14122:14122 PLF.SFImp <> Z def
+R14136:14150 PLF.SFImp <> subtract_slowly def
+def 14270:14273 <> loop
+R14277:14279 PLF.SFImp <> com ind
+R14286:14288 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R14323:14325 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R14289:14294 PLF.SFImp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R14299:14309 PLF.SFImp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R14314:14322 PLF.SFImp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R14295:14298 PLF.SFImp <> :com::'true' not
+R14310:14313 PLF.SFImp <> :com:com_scope:'skip' not
+ind 19709:19713 <> ceval
+constr 19761:19766 <> E_Skip
+constr 19814:19819 <> E_Asgn
+constr 19950:19961 <> E_Asgn_Error
+constr 20042:20046 <> E_Seq
+constr 20181:20188 <> E_IfTrue
+constr 20326:20334 <> E_IfFalse
+constr 20473:20484 <> E_WhileFalse
+constr 20576:20586 <> E_WhileTrue
+R19720:19723 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R19717:19719 PLF.SFImp <> com ind
+R19729:19732 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R19724:19728 PLF.SFImp <> state def
+R19745:19748 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R19733:19738 Corelib.Init.Datatypes <> option ind
+R19740:19744 PLF.SFImp <> state def
+R20794:20798 PLF.SFImp <> ceval:60 ind
+binder 19777:19778 <> st:61
+R19789:19792 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R19797:19801 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R19793:19796 PLF.SFImp <> :com:com_scope:'skip' not
+R19787:19788 PLF.SFImp <> st:61 var
+R19802:19805 Corelib.Init.Datatypes <> Some constr
+R19807:19808 PLF.SFImp <> st:61 var
+binder 19831:19832 <> st:62
+binder 19834:19834 <> a:63
+binder 19836:19836 <> n:64
+binder 19838:19838 <> x:65
+R19869:19880 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R19847:19848 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R19849:19863 PLF.SFImp <> aeval_div_error def
+R19865:19866 PLF.SFImp <> st:62 var
+R19868:19868 PLF.SFImp <> a:63 var
+R19899:19908 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R19895:19897 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19881:19889 PLF.SFImp <> aeval_div def
+R19891:19892 PLF.SFImp <> st:62 var
+R19894:19894 PLF.SFImp <> a:63 var
+R19898:19898 PLF.SFImp <> n:64 var
+R19911:19914 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R19921:19925 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R19916:19919 PLF.SFImp <> :com:com_scope:x_':='_x not
+R19915:19915 PLF.SFImp <> x:65 var
+R19920:19920 PLF.SFImp <> a:63 var
+R19909:19910 PLF.SFImp <> st:62 var
+R19926:19929 Corelib.Init.Datatypes <> Some constr
+R19933:19937 PLF.Maps <> :::x_'!->'_x_';'_x not
+R19939:19941 PLF.Maps <> :::x_'!->'_x_';'_x not
+R19942:19943 PLF.SFImp <> st:62 var
+R19932:19932 PLF.SFImp <> x:65 var
+R19938:19938 PLF.SFImp <> n:64 var
+binder 19972:19973 <> st:66
+binder 19975:19975 <> a:67
+binder 19977:19977 <> x:68
+R20006:20015 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R19986:20000 PLF.SFImp <> aeval_div_error def
+R20002:20003 PLF.SFImp <> st:66 var
+R20005:20005 PLF.SFImp <> a:67 var
+R20018:20021 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R20028:20032 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R20023:20026 PLF.SFImp <> :com:com_scope:x_':='_x not
+R20022:20022 PLF.SFImp <> x:68 var
+R20027:20027 PLF.SFImp <> a:67 var
+R20016:20017 PLF.SFImp <> st:66 var
+R20033:20036 Corelib.Init.Datatypes <> None constr
+binder 20057:20058 <> c1:69
+binder 20060:20061 <> c2:70
+binder 20063:20064 <> st:71
+binder 20066:20068 <> st':72
+binder 20070:20073 <> st'':73
+R20104:20114 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R20084:20088 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R20091:20095 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R20089:20090 PLF.SFImp <> c1:69 var
+R20082:20083 PLF.SFImp <> st:71 var
+R20096:20099 Corelib.Init.Datatypes <> Some constr
+R20101:20103 PLF.SFImp <> st':72 var
+R20138:20147 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R20118:20121 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R20124:20128 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R20122:20123 PLF.SFImp <> c2:70 var
+R20115:20117 PLF.SFImp <> st':72 var
+R20129:20132 Corelib.Init.Datatypes <> Some constr
+R20134:20137 PLF.SFImp <> st'':73 var
+R20150:20154 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R20162:20166 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R20157:20159 PLF.SFImp <> :com:com_scope:x_';'_x not
+R20155:20156 PLF.SFImp <> c1:69 var
+R20160:20161 PLF.SFImp <> c2:70 var
+R20148:20149 PLF.SFImp <> st:71 var
+R20167:20170 Corelib.Init.Datatypes <> Some constr
+R20172:20175 PLF.SFImp <> st'':73 var
+binder 20199:20200 <> st:74
+binder 20202:20204 <> st':75
+binder 20206:20206 <> b:76
+binder 20208:20209 <> c1:77
+binder 20211:20212 <> c2:78
+R20238:20247 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R20231:20233 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20221:20225 PLF.SFImp <> beval def
+R20227:20228 PLF.SFImp <> st:74 var
+R20230:20230 PLF.SFImp <> b:76 var
+R20234:20237 PLF.SFImp <> :::'true' not
+R20269:20278 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R20250:20253 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R20256:20260 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R20254:20255 PLF.SFImp <> c1:77 var
+R20248:20249 PLF.SFImp <> st:74 var
+R20261:20264 Corelib.Init.Datatypes <> Some constr
+R20266:20268 PLF.SFImp <> st':75 var
+R20281:20284 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R20309:20312 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R20285:20287 PLF.SFImp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R20289:20294 PLF.SFImp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R20297:20302 PLF.SFImp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R20305:20308 PLF.SFImp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R20288:20288 PLF.SFImp <> b:76 var
+R20295:20296 PLF.SFImp <> c1:77 var
+R20303:20304 PLF.SFImp <> c2:78 var
+R20279:20280 PLF.SFImp <> st:74 var
+R20313:20316 Corelib.Init.Datatypes <> Some constr
+R20318:20320 PLF.SFImp <> st':75 var
+binder 20345:20346 <> st:79
+binder 20348:20350 <> st':80
+binder 20352:20352 <> b:81
+binder 20354:20355 <> c1:82
+binder 20357:20358 <> c2:83
+R20385:20394 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R20377:20379 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20367:20371 PLF.SFImp <> beval def
+R20373:20374 PLF.SFImp <> st:79 var
+R20376:20376 PLF.SFImp <> b:81 var
+R20380:20384 PLF.SFImp <> :::'false' not
+R20416:20425 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R20397:20400 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R20403:20407 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R20401:20402 PLF.SFImp <> c2:83 var
+R20395:20396 PLF.SFImp <> st:79 var
+R20408:20411 Corelib.Init.Datatypes <> Some constr
+R20413:20415 PLF.SFImp <> st':80 var
+R20428:20431 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R20456:20459 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R20432:20434 PLF.SFImp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R20436:20441 PLF.SFImp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R20444:20449 PLF.SFImp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R20452:20455 PLF.SFImp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R20435:20435 PLF.SFImp <> b:81 var
+R20442:20443 PLF.SFImp <> c1:82 var
+R20450:20451 PLF.SFImp <> c2:83 var
+R20426:20427 PLF.SFImp <> st:79 var
+R20460:20463 Corelib.Init.Datatypes <> Some constr
+R20465:20467 PLF.SFImp <> st':80 var
+binder 20495:20495 <> b:84
+binder 20497:20498 <> st:85
+binder 20500:20500 <> c:86
+R20527:20536 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R20519:20521 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20509:20513 PLF.SFImp <> beval def
+R20515:20516 PLF.SFImp <> st:85 var
+R20518:20518 PLF.SFImp <> b:84 var
+R20522:20526 PLF.SFImp <> :::'false' not
+R20539:20542 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R20559:20563 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R20543:20548 PLF.SFImp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R20550:20553 PLF.SFImp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R20555:20558 PLF.SFImp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R20549:20549 PLF.SFImp <> b:84 var
+R20554:20554 PLF.SFImp <> c:86 var
+R20537:20538 PLF.SFImp <> st:85 var
+R20564:20567 Corelib.Init.Datatypes <> Some constr
+R20569:20570 PLF.SFImp <> st:85 var
+binder 20597:20598 <> st:87
+binder 20600:20602 <> st':88
+binder 20604:20607 <> st'':89
+binder 20609:20609 <> b:90
+binder 20611:20611 <> c:91
+R20637:20646 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R20630:20632 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20620:20624 PLF.SFImp <> beval def
+R20626:20627 PLF.SFImp <> st:87 var
+R20629:20629 PLF.SFImp <> b:90 var
+R20633:20636 PLF.SFImp <> :::'true' not
+R20668:20677 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R20649:20653 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R20655:20659 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R20654:20654 PLF.SFImp <> c:91 var
+R20647:20648 PLF.SFImp <> st:87 var
+R20660:20663 Corelib.Init.Datatypes <> Some constr
+R20665:20667 PLF.SFImp <> st':88 var
+R20715:20724 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R20681:20684 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R20701:20705 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R20685:20690 PLF.SFImp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R20692:20695 PLF.SFImp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R20697:20700 PLF.SFImp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R20691:20691 PLF.SFImp <> b:90 var
+R20696:20696 PLF.SFImp <> c:91 var
+R20678:20680 PLF.SFImp <> st':88 var
+R20706:20709 Corelib.Init.Datatypes <> Some constr
+R20711:20714 PLF.SFImp <> st'':89 var
+R20727:20731 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R20748:20752 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R20732:20737 PLF.SFImp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R20739:20742 PLF.SFImp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R20744:20747 PLF.SFImp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R20738:20738 PLF.SFImp <> b:90 var
+R20743:20743 PLF.SFImp <> c:91 var
+R20725:20726 PLF.SFImp <> st:87 var
+R20753:20756 Corelib.Init.Datatypes <> Some constr
+R20758:20761 PLF.SFImp <> st'':89 var
+scheme 19709:19713 <> ceval_ind
+scheme 19709:19713 <> ceval_sind
+R20794:20798 PLF.SFImp <> ceval ind
+not 20772:20772 <> :::x_'=['_x_']=>'_x
+def 21068:21081 <> ceval_example1
+R21094:21102 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R21174:21180 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R21109:21115 PLF.SFImp <> :com:com_scope:x_';'_x not
+R21104:21107 PLF.SFImp <> :com:com_scope:x_':='_x not
+R21103:21103 PLF.SFImp <> X def
+R21116:21118 PLF.SFImp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R21127:21139 PLF.SFImp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R21146:21158 PLF.SFImp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R21165:21173 PLF.SFImp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R21119:21119 PLF.SFImp <> :com:com_scope:'('_x_')' not
+R21126:21126 PLF.SFImp <> :com:com_scope:'('_x_')' not
+R21121:21124 PLF.SFImp <> :com::x_'<='_x not
+R21120:21120 PLF.SFImp <> X def
+R21141:21144 PLF.SFImp <> :com:com_scope:x_':='_x not
+R21140:21140 PLF.SFImp <> Y def
+R21160:21163 PLF.SFImp <> :com:com_scope:x_':='_x not
+R21159:21159 PLF.SFImp <> Z def
+R21086:21093 PLF.SFImp <> empty_st def
+R21181:21184 Corelib.Init.Datatypes <> Some constr
+R21188:21192 PLF.Maps <> :::x_'!->'_x_';'_x not
+R21194:21196 PLF.Maps <> :::x_'!->'_x_';'_x not
+R21198:21202 PLF.SFImp <> :::x_'!->'_x not
+R21197:21197 PLF.SFImp <> X def
+R21187:21187 PLF.SFImp <> Z def
+R21281:21285 PLF.SFImp <> :::x_'!->'_x not
+R21280:21280 PLF.SFImp <> X def
+R21268:21272 PLF.SFImp <> E_Seq constr
+R21281:21285 PLF.SFImp <> :::x_'!->'_x not
+R21280:21280 PLF.SFImp <> X def
+R21268:21272 PLF.SFImp <> E_Seq constr
+R21329:21334 PLF.SFImp <> E_Asgn constr
+R21329:21334 PLF.SFImp <> E_Asgn constr
+R21375:21383 PLF.SFImp <> E_IfFalse constr
+R21375:21383 PLF.SFImp <> E_IfFalse constr
+R21417:21422 PLF.SFImp <> E_Asgn constr
+R21417:21422 PLF.SFImp <> E_Asgn constr
+def 21503:21516 <> ceval_example2
+R21529:21536 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R21567:21573 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R21543:21548 PLF.SFImp <> :com:com_scope:x_';'_x not
+R21538:21541 PLF.SFImp <> :com:com_scope:x_':='_x not
+R21537:21537 PLF.SFImp <> X def
+R21555:21560 PLF.SFImp <> :com:com_scope:x_';'_x not
+R21550:21553 PLF.SFImp <> :com:com_scope:x_':='_x not
+R21549:21549 PLF.SFImp <> Y def
+R21562:21565 PLF.SFImp <> :com:com_scope:x_':='_x not
+R21561:21561 PLF.SFImp <> Z def
+R21521:21528 PLF.SFImp <> empty_st def
+R21574:21577 Corelib.Init.Datatypes <> Some constr
+R21581:21585 PLF.Maps <> :::x_'!->'_x_';'_x not
+R21587:21589 PLF.Maps <> :::x_'!->'_x_';'_x not
+R21591:21595 PLF.Maps <> :::x_'!->'_x_';'_x not
+R21597:21599 PLF.Maps <> :::x_'!->'_x_';'_x not
+R21601:21605 PLF.SFImp <> :::x_'!->'_x not
+R21600:21600 PLF.SFImp <> X def
+R21590:21590 PLF.SFImp <> Y def
+R21580:21580 PLF.SFImp <> Z def
+R21689:21702 PLF.SFImp <> ceval_example2 prfax
+def 22113:22120 <> pup_to_n
+R22124:22126 PLF.SFImp <> com ind
+prf 22204:22217 <> pup_to_2_ceval
+R22223:22223 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R22231:22239 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R22248:22254 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R22240:22247 PLF.SFImp <> pup_to_n prfax
+R22225:22229 PLF.SFImp <> :::x_'!->'_x not
+R22224:22224 PLF.SFImp <> X def
+R22255:22258 Corelib.Init.Datatypes <> Some constr
+R22262:22266 PLF.Maps <> :::x_'!->'_x_';'_x not
+R22268:22270 PLF.Maps <> :::x_'!->'_x_';'_x not
+R22272:22276 PLF.Maps <> :::x_'!->'_x_';'_x not
+R22278:22280 PLF.Maps <> :::x_'!->'_x_';'_x not
+R22282:22286 PLF.Maps <> :::x_'!->'_x_';'_x not
+R22288:22290 PLF.Maps <> :::x_'!->'_x_';'_x not
+R22292:22296 PLF.Maps <> :::x_'!->'_x_';'_x not
+R22298:22300 PLF.Maps <> :::x_'!->'_x_';'_x not
+R22302:22306 PLF.Maps <> :::x_'!->'_x_';'_x not
+R22308:22310 PLF.Maps <> :::x_'!->'_x_';'_x not
+R22312:22316 PLF.SFImp <> :::x_'!->'_x not
+R22311:22311 PLF.SFImp <> X def
+R22301:22301 PLF.SFImp <> Y def
+R22291:22291 PLF.SFImp <> Y def
+R22281:22281 PLF.SFImp <> X def
+R22271:22271 PLF.SFImp <> Y def
+R22261:22261 PLF.SFImp <> X def
+prf 23041:23059 <> ceval_deterministic
+binder 23069:23069 <> c:92
+binder 23071:23072 <> st:93
+binder 23074:23076 <> st1:94
+binder 23078:23080 <> st2:95
+R23103:23112 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R23090:23093 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R23095:23099 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R23094:23094 PLF.SFImp <> c:92 var
+R23088:23089 PLF.SFImp <> st:93 var
+R23100:23102 PLF.SFImp <> st1:94 var
+R23128:23136 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R23115:23118 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R23120:23124 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R23119:23119 PLF.SFImp <> c:92 var
+R23113:23114 PLF.SFImp <> st:93 var
+R23125:23127 PLF.SFImp <> st2:95 var
+R23140:23142 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23137:23139 PLF.SFImp <> st1:94 var
+R23143:23145 PLF.SFImp <> st2:95 var
+prf 24304:24313 <> plus2_spec
+binder 24324:24325 <> st:96
+binder 24327:24327 <> n:97
+binder 24329:24331 <> st':98
+R24344:24349 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R24340:24342 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24336:24337 PLF.SFImp <> st:96 var
+R24339:24339 PLF.SFImp <> X def
+R24343:24343 PLF.SFImp <> n:97 var
+R24374:24379 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R24352:24355 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R24361:24365 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R24356:24360 PLF.SFImp <> plus2 def
+R24350:24351 PLF.SFImp <> st:96 var
+R24366:24369 Corelib.Init.Datatypes <> Some constr
+R24371:24373 PLF.SFImp <> st':98 var
+R24385:24387 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24380:24382 PLF.SFImp <> st':98 var
+R24384:24384 PLF.SFImp <> X def
+R24389:24391 Corelib.Init.Nat <> ::nat_scope:x_'+'_x not
+R24388:24388 PLF.SFImp <> n:97 var
+R24718:24728 PLF.Maps <> t_update_eq prfax
+R24718:24728 PLF.Maps <> t_update_eq prfax
+def 24932:24963 <> manual_grade_for_XtimesYinZ_spec
+R24967:24972 Corelib.Init.Datatypes <> option ind
+R24978:24978 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R24975:24977 Corelib.Init.Datatypes <> nat ind
+R24979:24984 Stdlib.Strings.String <> string ind
+R24990:24993 Corelib.Init.Datatypes <> None constr
+prf 25093:25108 <> loop_never_stops
+binder 25119:25120 <> st:99
+binder 25122:25124 <> st':100
+R25129:25130 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R25149:25149 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R25133:25136 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R25141:25145 PLF.SFImp <> :::x_'=['_x_']=>'_x not
+R25137:25140 PLF.SFImp <> loop def
+R25131:25132 PLF.SFImp <> st:99 var
+R25146:25148 PLF.SFImp <> st':100 var
+R25190:25193 PLF.SFImp <> loop def
+R25217:25219 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R25242:25244 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R25220:25225 PLF.SFImp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R25230:25233 PLF.SFImp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R25238:25241 PLF.SFImp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R25226:25229 PLF.SFImp <> :com::'true' not
+R25234:25237 PLF.SFImp <> :com:com_scope:'skip' not
+R25217:25219 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R25242:25244 PLF.SFImp <> ::com_scope:'<{'_x_'}>' not
+R25220:25225 PLF.SFImp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R25230:25233 PLF.SFImp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R25238:25241 PLF.SFImp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R25226:25229 PLF.SFImp <> :com::'true' not
+R25234:25237 PLF.SFImp <> :com:com_scope:'skip' not

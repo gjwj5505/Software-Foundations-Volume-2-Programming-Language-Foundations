@@ -1,0 +1,1107 @@
+DIGEST 62267daa59f10b8b77e9345806e5dae9
+FPLF.SFArray
+R94:97 Stdlib.Bool.Bool <> <> lib
+R127:134 Stdlib.Init.Nat <> <> lib
+R164:168 Stdlib.Arith.Arith <> <> lib
+R198:202 Stdlib.Arith.EqNat <> <> lib
+R212:214 Stdlib.Arith.PeanoNat Nat <> mod
+R244:246 Stdlib.micromega.Lia <> <> lib
+R276:279 Stdlib.Lists.List <> <> lib
+R289:301 Stdlib.Lists.List ListNotations <> mod
+R331:344 Stdlib.Strings.String <> <> lib
+R371:374 PLF.Maps <> <> lib
+R424:430 Stdlib.Program.Program <> <> lib
+R432:441 Corelib.Program.Wf <> <> lib
+prf 480:485 <> __mp__
+binder 495:495 <> P:1
+binder 497:497 <> Q:2
+R507:510 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R506:506 PLF.SFArray <> P:1 var
+R511:511 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R518:522 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R513:516 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R512:512 PLF.SFArray <> P:1 var
+R517:517 PLF.SFArray <> Q:2 var
+R523:523 PLF.SFArray <> Q:2 var
+R580:585 PLF.SFArray <> __mp__ thm
+def 882:889 <> nat2bool
+R895:897 Corelib.Init.Datatypes <> nat ind
+binder 892:892 <> n:3
+R902:905 Corelib.Init.Datatypes <> bool ind
+R919:923 Corelib.Init.Nat <> ::nat_scope:x_'mod'_x not
+R918:918 PLF.SFArray <> n:3 var
+R940:944 Corelib.Init.Datatypes <> false constr
+R955:958 Corelib.Init.Datatypes <> true constr
+def 979:986 <> bool2nat
+R992:995 Corelib.Init.Datatypes <> bool ind
+binder 989:989 <> b:4
+R1000:1002 Corelib.Init.Datatypes <> nat ind
+R1015:1015 PLF.SFArray <> b:4 var
+R1026:1030 Corelib.Init.Datatypes <> false constr
+R1041:1044 Corelib.Init.Datatypes <> true constr
+def 1076:1083 <> nat2bits
+R1089:1091 Corelib.Init.Datatypes <> nat ind
+binder 1086:1086 <> n:6
+R1108:1111 Corelib.Init.Datatypes <> list ind
+R1113:1116 Corelib.Init.Datatypes <> bool ind
+R1129:1129 PLF.SFArray <> n:6 var
+R1145:1146 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R1167:1170 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1157:1164 PLF.SFArray <> nat2bool def
+R1166:1166 PLF.SFArray <> n:6 var
+R1171:1178 PLF.SFArray <> nat2bits:7 def
+R1182:1182 Corelib.Init.Nat <> ::nat_scope:x_'/'_x not
+R1181:1181 PLF.SFArray <> n:6 var
+R1222:1227 Stdlib.Arith.PeanoNat Nat divmod def
+R1222:1227 Stdlib.Arith.PeanoNat Nat divmod def
+R1271:1281 Stdlib.Arith.PeanoNat Nat divmod_spec thm
+R1271:1281 Stdlib.Arith.PeanoNat Nat divmod_spec thm
+def 1335:1342 <> bits2nat
+R1349:1352 Corelib.Init.Datatypes <> list ind
+R1354:1357 Corelib.Init.Datatypes <> bool ind
+binder 1345:1346 <> bs:9
+R1362:1364 Corelib.Init.Datatypes <> nat ind
+R1377:1378 PLF.SFArray <> bs:9 var
+R1389:1390 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R1402:1405 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1423:1425 Corelib.Init.Nat <> ::nat_scope:x_'+'_x not
+R1413:1420 PLF.SFArray <> bool2nat def
+R1438:1440 Corelib.Init.Nat <> ::nat_scope:x_'*'_x not
+R1426:1433 PLF.SFArray <> bits2nat:10 def
+def 1460:1476 <> zip_nil_with_bits
+R1483:1486 Corelib.Init.Datatypes <> list ind
+R1488:1491 Corelib.Init.Datatypes <> bool ind
+binder 1479:1480 <> bs:12
+R1496:1499 Corelib.Init.Datatypes <> list ind
+R1501:1504 Corelib.Init.Datatypes <> bool ind
+R1517:1518 PLF.SFArray <> bs:12 var
+R1529:1530 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R1535:1536 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R1543:1546 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1559:1562 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1554:1558 Corelib.Init.Datatypes <> false constr
+R1564:1567 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1568:1584 PLF.SFArray <> zip_nil_with_bits:13 def
+def 1607:1614 <> zip_bits
+R1626:1629 Corelib.Init.Datatypes <> list ind
+R1631:1634 Corelib.Init.Datatypes <> bool ind
+binder 1617:1619 <> bs1:15
+binder 1621:1623 <> bs2:16
+R1639:1642 Corelib.Init.Datatypes <> list ind
+R1644:1647 Corelib.Init.Datatypes <> bool ind
+R1660:1662 PLF.SFArray <> bs1:15 var
+R1673:1674 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R1679:1695 PLF.SFArray <> zip_nil_with_bits def
+R1697:1699 PLF.SFArray <> bs2:16 var
+R1707:1710 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1731:1733 PLF.SFArray <> bs2:16 var
+R1748:1749 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R1756:1759 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1765:1768 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1760:1764 Corelib.Init.Datatypes <> false constr
+R1769:1776 PLF.SFArray <> zip_bits:17 def
+R1783:1784 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R1796:1799 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1810:1813 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1816:1819 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1820:1827 PLF.SFArray <> zip_bits:17 def
+def 1866:1875 <> unzip_bits
+R1882:1885 Corelib.Init.Datatypes <> list ind
+R1887:1890 Corelib.Init.Datatypes <> bool ind
+binder 1878:1879 <> bs:20
+R1904:1906 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R1895:1898 Corelib.Init.Datatypes <> list ind
+R1900:1903 Corelib.Init.Datatypes <> bool ind
+R1907:1910 Corelib.Init.Datatypes <> list ind
+R1912:1915 Corelib.Init.Datatypes <> bool ind
+R1928:1929 PLF.SFArray <> bs:20 var
+R1940:1941 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R1946:1946 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1949:1950 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1953:1953 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1947:1948 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R1951:1952 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R1960:1963 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1964:1965 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R1970:1970 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1974:1975 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1983:1983 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1971:1971 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R1973:1973 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R1976:1976 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R1982:1982 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R1977:1981 Corelib.Init.Datatypes <> false constr
+R1991:1994 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1997:2000 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2032:2041 PLF.SFArray <> unzip_bits:21 def
+binder 2019:2021 <> bs1:23
+binder 2024:2026 <> bs2:24
+R2056:2056 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2066:2067 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2077:2077 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2059:2062 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2063:2065 PLF.SFArray <> bs1:23 var
+R2070:2073 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2074:2076 PLF.SFArray <> bs2:24 var
+def 2098:2108 <> encode_pair
+R2116:2118 Corelib.Init.Datatypes <> nat ind
+binder 2111:2111 <> n:25
+binder 2113:2113 <> m:26
+R2123:2125 Corelib.Init.Datatypes <> nat ind
+R2132:2139 PLF.SFArray <> bits2nat def
+R2142:2149 PLF.SFArray <> zip_bits def
+R2152:2159 PLF.SFArray <> nat2bits def
+R2161:2161 PLF.SFArray <> n:25 var
+R2165:2172 PLF.SFArray <> nat2bits def
+R2174:2174 PLF.SFArray <> m:26 var
+def 2191:2201 <> decode_pair
+R2207:2209 Corelib.Init.Datatypes <> nat ind
+binder 2204:2204 <> n:27
+R2217:2219 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R2214:2216 Corelib.Init.Datatypes <> nat ind
+R2220:2222 Corelib.Init.Datatypes <> nat ind
+R2247:2256 PLF.SFArray <> unzip_bits def
+R2259:2266 PLF.SFArray <> nat2bits def
+R2268:2268 PLF.SFArray <> n:27 var
+binder 2234:2236 <> bs1:28
+binder 2239:2241 <> bs2:29
+R2276:2276 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2289:2290 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2303:2303 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2277:2284 PLF.SFArray <> bits2nat def
+R2286:2288 PLF.SFArray <> bs1:28 var
+R2291:2298 PLF.SFArray <> bits2nat def
+R2300:2302 PLF.SFArray <> bs2:29 var
+def 2318:2324 <> bprefix
+R2335:2338 Corelib.Init.Datatypes <> list ind
+R2340:2343 Corelib.Init.Datatypes <> bool ind
+binder 2327:2328 <> bs:30
+binder 2330:2332 <> bs':31
+R2358:2364 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R2366:2367 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 2365:2365 <> n:32
+R2371:2373 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2368:2370 PLF.SFArray <> bs':31 var
+R2376:2379 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R2374:2375 PLF.SFArray <> bs:30 var
+R2380:2385 Corelib.Lists.ListDef <> repeat def
+R2393:2393 PLF.SFArray <> n:32 var
+R2387:2391 Corelib.Init.Datatypes <> false constr
+prf 2421:2437 <> nat2bool_bool2nat
+binder 2439:2439 <> n:33
+R2465:2467 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2444:2451 PLF.SFArray <> bool2nat def
+R2454:2461 PLF.SFArray <> nat2bool def
+R2463:2463 PLF.SFArray <> n:33 var
+R2469:2473 Corelib.Init.Nat <> ::nat_scope:x_'mod'_x not
+R2468:2468 PLF.SFArray <> n:33 var
+R2493:2500 PLF.SFArray <> nat2bool def
+R2503:2510 PLF.SFArray <> bool2nat def
+R2526:2530 Corelib.Init.Nat <> ::nat_scope:x_'mod'_x not
+R2526:2530 Corelib.Init.Nat <> ::nat_scope:x_'mod'_x not
+R2562:2576 Stdlib.Arith.PeanoNat Nat mod_upper_bound def
+R2562:2576 Stdlib.Arith.PeanoNat Nat mod_upper_bound def
+prf 2608:2624 <> bool2nat_nat2bool
+binder 2626:2626 <> b:34
+R2652:2654 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2631:2638 PLF.SFArray <> nat2bool def
+R2641:2648 PLF.SFArray <> bool2nat def
+R2650:2650 PLF.SFArray <> b:34 var
+R2655:2655 PLF.SFArray <> b:34 var
+R2674:2681 PLF.SFArray <> nat2bool def
+R2684:2691 PLF.SFArray <> bool2nat def
+prf 2725:2739 <> nat2bits_unfold
+binder 2741:2741 <> n:35
+R2756:2758 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2746:2753 PLF.SFArray <> nat2bits def
+R2755:2755 PLF.SFArray <> n:35 var
+R2765:2765 PLF.SFArray <> n:35 var
+R2794:2795 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R2829:2832 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2819:2826 PLF.SFArray <> nat2bool def
+R2828:2828 PLF.SFArray <> n:35 var
+R2833:2840 PLF.SFArray <> nat2bits def
+R2844:2844 Corelib.Init.Nat <> ::nat_scope:x_'/'_x not
+R2843:2843 PLF.SFArray <> n:35 var
+R2884:2891 PLF.SFArray <> nat2bits def
+R2902:2907 Corelib.Program.Wf <> Fix_eq thm
+R2902:2907 Corelib.Program.Wf <> Fix_eq thm
+R2902:2907 Corelib.Program.Wf <> Fix_eq thm
+R2902:2907 Corelib.Program.Wf <> Fix_eq thm
+prf 3001:3015 <> nat2bits_step_0
+R3030:3032 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3020:3027 PLF.SFArray <> nat2bits def
+R3033:3034 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R3052:3066 PLF.SFArray <> nat2bits_unfold thm
+R3052:3066 PLF.SFArray <> nat2bits_unfold thm
+R3052:3066 PLF.SFArray <> nat2bits_unfold thm
+prf 3088:3102 <> nat2bits_step_1
+R3117:3119 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3107:3114 PLF.SFArray <> nat2bits def
+R3120:3120 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R3125:3125 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R3121:3124 Corelib.Init.Datatypes <> true constr
+R3143:3157 PLF.SFArray <> nat2bits_unfold thm
+R3143:3157 PLF.SFArray <> nat2bits_unfold thm
+R3143:3157 PLF.SFArray <> nat2bits_unfold thm
+prf 3179:3191 <> nat2bits_step
+binder 3193:3193 <> q:37
+binder 3195:3195 <> r:38
+R3205:3207 Corelib.Init.Peano <> ::nat_scope:x_'>'_x not
+R3204:3204 PLF.SFArray <> q:37 var
+binder 3200:3201 <> NZ:39
+R3220:3223 Corelib.Init.Peano <> ::nat_scope:x_'<='_x not
+R3219:3219 PLF.SFArray <> r:38 var
+binder 3214:3216 <> RES:40
+R3253:3255 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3233:3240 PLF.SFArray <> nat2bits def
+R3244:3246 Corelib.Init.Nat <> ::nat_scope:x_'+'_x not
+R3243:3243 PLF.SFArray <> r:38 var
+R3248:3250 Corelib.Init.Nat <> ::nat_scope:x_'*'_x not
+R3247:3247 PLF.SFArray <> q:37 var
+R3266:3269 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R3256:3263 PLF.SFArray <> nat2bool def
+R3265:3265 PLF.SFArray <> r:38 var
+R3270:3277 PLF.SFArray <> nat2bits def
+R3279:3279 PLF.SFArray <> q:37 var
+R3299:3313 PLF.SFArray <> nat2bits_unfold thm
+R3299:3313 PLF.SFArray <> nat2bits_unfold thm
+R3299:3313 PLF.SFArray <> nat2bits_unfold thm
+R3329:3331 Corelib.Init.Nat <> ::nat_scope:x_'+'_x not
+R3333:3335 Corelib.Init.Nat <> ::nat_scope:x_'*'_x not
+R3329:3331 Corelib.Init.Nat <> ::nat_scope:x_'+'_x not
+R3333:3335 Corelib.Init.Nat <> ::nat_scope:x_'*'_x not
+R3379:3386 PLF.SFArray <> nat2bool def
+R3403:3414 Stdlib.Arith.PeanoNat Nat.Div0 mod_add thm
+R3403:3414 Stdlib.Arith.PeanoNat Nat.Div0 mod_add thm
+R3403:3414 Stdlib.Arith.PeanoNat Nat.Div0 mod_add thm
+R3436:3450 PLF.SFArray <> nat2bits_unfold thm
+R3454:3468 PLF.SFArray <> nat2bits_unfold thm
+R3436:3450 PLF.SFArray <> nat2bits_unfold thm
+R3436:3450 PLF.SFArray <> nat2bits_unfold thm
+R3454:3468 PLF.SFArray <> nat2bits_unfold thm
+R3454:3468 PLF.SFArray <> nat2bits_unfold thm
+R3491:3500 Stdlib.Arith.PeanoNat Nat div_unique def
+R3491:3500 Stdlib.Arith.PeanoNat Nat div_unique def
+R3491:3500 Stdlib.Arith.PeanoNat Nat div_unique def
+R3491:3500 Stdlib.Arith.PeanoNat Nat div_unique def
+R3491:3500 Stdlib.Arith.PeanoNat Nat div_unique def
+prf 3540:3552 <> nat2bits_zero
+binder 3554:3555 <> bs:41
+R3577:3579 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3566:3573 PLF.SFArray <> bits2nat def
+R3575:3576 PLF.SFArray <> bs:41 var
+binder 3560:3563 <> ZERO:42
+R3591:3593 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3589:3590 PLF.SFArray <> bs:41 var
+R3594:3599 Corelib.Lists.ListDef <> repeat def
+R3608:3618 Stdlib.Lists.List <> length abbrev
+R3620:3621 PLF.SFArray <> bs:41 var
+R3601:3605 Corelib.Init.Datatypes <> false constr
+prf 3789:3802 <> bits2nat_zeros
+binder 3804:3804 <> n:43
+R3835:3837 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3810:3817 PLF.SFArray <> bits2nat def
+R3820:3825 Corelib.Lists.ListDef <> repeat def
+R3833:3833 PLF.SFArray <> n:43 var
+R3827:3831 Corelib.Init.Datatypes <> false constr
+prf 3895:3915 <> zip_bits_repeat_false
+binder 3917:3918 <> n1:44
+binder 3920:3921 <> n2:45
+R3927:3933 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R3935:3936 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 3934:3934 <> n:46
+R3981:3983 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3937:3944 PLF.SFArray <> zip_bits def
+R3947:3952 Corelib.Lists.ListDef <> repeat def
+R3960:3961 PLF.SFArray <> n1:44 var
+R3954:3958 Corelib.Init.Datatypes <> false constr
+R3965:3970 Corelib.Lists.ListDef <> repeat def
+R3978:3979 PLF.SFArray <> n2:45 var
+R3972:3976 Corelib.Init.Datatypes <> false constr
+R3984:3989 Corelib.Lists.ListDef <> repeat def
+R3997:3997 PLF.SFArray <> n:46 var
+R3991:3995 Corelib.Init.Datatypes <> false constr
+R4112:4112 Corelib.Init.Datatypes <> S constr
+R4115:4115 Corelib.Init.Datatypes <> S constr
+R4112:4112 Corelib.Init.Datatypes <> S constr
+R4115:4115 Corelib.Init.Datatypes <> S constr
+R4200:4200 Corelib.Init.Datatypes <> S constr
+R4203:4203 Corelib.Init.Datatypes <> S constr
+R4200:4200 Corelib.Init.Datatypes <> S constr
+R4203:4203 Corelib.Init.Datatypes <> S constr
+R4270:4270 Corelib.Init.Datatypes <> S constr
+R4273:4273 Corelib.Init.Datatypes <> S constr
+R4270:4270 Corelib.Init.Datatypes <> S constr
+R4273:4273 Corelib.Init.Datatypes <> S constr
+prf 4319:4334 <> zip_bits_bprefix
+binder 4336:4338 <> bs1:47
+binder 4340:4342 <> bs2:48
+binder 4344:4347 <> bs1':49
+binder 4349:4352 <> bs2':50
+R4364:4370 PLF.SFArray <> bprefix def
+R4372:4374 PLF.SFArray <> bs1:47 var
+R4376:4379 PLF.SFArray <> bs1':49 var
+binder 4357:4361 <> PREF1:51
+R4392:4398 PLF.SFArray <> bprefix def
+R4400:4402 PLF.SFArray <> bs2:48 var
+R4404:4407 PLF.SFArray <> bs2':50 var
+binder 4385:4389 <> PREF2:52
+R4416:4422 PLF.SFArray <> bprefix def
+R4425:4432 PLF.SFArray <> zip_bits def
+R4434:4436 PLF.SFArray <> bs1:47 var
+R4438:4440 PLF.SFArray <> bs2:48 var
+R4444:4451 PLF.SFArray <> zip_bits def
+R4453:4456 PLF.SFArray <> bs1':49 var
+R4458:4461 PLF.SFArray <> bs2':50 var
+R4615:4635 PLF.SFArray <> zip_bits_repeat_false thm
+R4615:4635 PLF.SFArray <> zip_bits_repeat_false thm
+R4685:4688 Stdlib.Arith.PeanoNat Nat pred def
+R4685:4688 Stdlib.Arith.PeanoNat Nat pred def
+R4800:4801 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R4806:4809 Stdlib.Arith.PeanoNat Nat pred def
+R4800:4801 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R4806:4809 Stdlib.Arith.PeanoNat Nat pred def
+prf 4968:4983 <> bprefix_bits2nat
+binder 4985:4986 <> bs:53
+binder 4988:4990 <> bs':54
+R4999:5005 PLF.SFArray <> bprefix def
+R5007:5008 PLF.SFArray <> bs:53 var
+R5010:5012 PLF.SFArray <> bs':54 var
+binder 4995:4996 <> LE:55
+R5032:5034 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5021:5028 PLF.SFArray <> bits2nat def
+R5030:5031 PLF.SFArray <> bs:53 var
+R5035:5042 PLF.SFArray <> bits2nat def
+R5044:5046 PLF.SFArray <> bs':54 var
+R5136:5149 PLF.SFArray <> bits2nat_zeros thm
+R5136:5149 PLF.SFArray <> bits2nat_zeros thm
+R5136:5149 PLF.SFArray <> bits2nat_zeros thm
+R5212:5215 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R5216:5221 Corelib.Lists.ListDef <> repeat def
+R5223:5227 Corelib.Init.Datatypes <> false constr
+R5212:5215 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R5216:5221 Corelib.Lists.ListDef <> repeat def
+R5223:5227 Corelib.Init.Datatypes <> false constr
+prf 5283:5294 <> bprefix_refl
+binder 5296:5297 <> bs:56
+R5302:5308 PLF.SFArray <> bprefix def
+R5310:5311 PLF.SFArray <> bs:56 var
+R5313:5314 PLF.SFArray <> bs:56 var
+R5351:5364 Stdlib.Lists.List <> app_nil_r thm
+R5351:5364 Stdlib.Lists.List <> app_nil_r thm
+R5351:5364 Stdlib.Lists.List <> app_nil_r thm
+prf 5386:5402 <> nat2bits_bits2nat
+binder 5404:5404 <> n:57
+R5411:5413 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5410:5410 PLF.SFArray <> n:57 var
+R5414:5421 PLF.SFArray <> bits2nat def
+R5424:5431 PLF.SFArray <> nat2bits def
+R5433:5433 PLF.SFArray <> n:57 var
+binder 5458:5458 <> m:58
+R5466:5469 Corelib.Init.Peano <> ::nat_scope:x_'<='_x not
+R5465:5465 PLF.SFArray <> m:58 var
+binder 5461:5462 <> LE:59
+R5475:5477 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5474:5474 PLF.SFArray <> m:58 var
+R5478:5485 PLF.SFArray <> bits2nat def
+R5488:5495 PLF.SFArray <> nat2bits def
+R5497:5497 PLF.SFArray <> m:58 var
+binder 5458:5458 <> m:60
+R5466:5469 Corelib.Init.Peano <> ::nat_scope:x_'<='_x not
+R5465:5465 PLF.SFArray <> m:60 var
+binder 5461:5462 <> LE:61
+R5475:5477 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5474:5474 PLF.SFArray <> m:60 var
+R5478:5485 PLF.SFArray <> bits2nat def
+R5488:5495 PLF.SFArray <> nat2bits def
+R5497:5497 PLF.SFArray <> m:60 var
+R5606:5617 Stdlib.Arith.PeanoNat Nat.Div0 div_mod thm
+R5620:5620 Corelib.Init.Datatypes <> S constr
+R5606:5617 Stdlib.Arith.PeanoNat Nat.Div0 div_mod thm
+R5620:5620 Corelib.Init.Datatypes <> S constr
+R5649:5651 Corelib.Init.Nat <> ::nat_scope:x_'/'_x not
+R5646:5646 Corelib.Init.Datatypes <> S constr
+R5649:5651 Corelib.Init.Nat <> ::nat_scope:x_'/'_x not
+R5646:5646 Corelib.Init.Datatypes <> S constr
+R5684:5698 PLF.SFArray <> nat2bits_unfold thm
+R5684:5698 PLF.SFArray <> nat2bits_unfold thm
+R5684:5698 PLF.SFArray <> nat2bits_unfold thm
+R5710:5717 PLF.SFArray <> bits2nat def
+R5725:5732 PLF.SFArray <> bits2nat def
+R5725:5732 PLF.SFArray <> bits2nat def
+R5745:5761 PLF.SFArray <> nat2bool_bool2nat thm
+R5745:5761 PLF.SFArray <> nat2bool_bool2nat thm
+R5745:5761 PLF.SFArray <> nat2bool_bool2nat thm
+prf 5781:5797 <> bits2nat_nat2bits
+binder 5799:5800 <> bs:62
+R5806:5812 PLF.SFArray <> bprefix def
+R5815:5822 PLF.SFArray <> nat2bits def
+R5825:5832 PLF.SFArray <> bits2nat def
+R5834:5835 PLF.SFArray <> bs:62 var
+R5839:5840 PLF.SFArray <> bs:62 var
+R5919:5926 PLF.SFArray <> bits2nat def
+R5919:5926 PLF.SFArray <> bits2nat def
+R5951:5958 PLF.SFArray <> bits2nat def
+R6013:6027 PLF.SFArray <> nat2bits_step_1 thm
+R6013:6027 PLF.SFArray <> nat2bits_step_1 thm
+R6013:6027 PLF.SFArray <> nat2bits_step_1 thm
+R6038:6048 Stdlib.Lists.List <> length abbrev
+R6038:6048 Stdlib.Lists.List <> length abbrev
+R6084:6096 PLF.SFArray <> nat2bits_zero thm
+R6084:6096 PLF.SFArray <> nat2bits_zero thm
+R6133:6147 PLF.SFArray <> nat2bits_step_0 thm
+R6133:6147 PLF.SFArray <> nat2bits_step_0 thm
+R6133:6147 PLF.SFArray <> nat2bits_step_0 thm
+R6159:6161 Corelib.Init.Nat <> ::nat_scope:x_'+'_x not
+R6162:6172 Stdlib.Lists.List <> length abbrev
+R6159:6161 Corelib.Init.Nat <> ::nat_scope:x_'+'_x not
+R6162:6172 Stdlib.Lists.List <> length abbrev
+R6208:6220 PLF.SFArray <> nat2bits_zero thm
+R6208:6220 PLF.SFArray <> nat2bits_zero thm
+R6248:6255 PLF.SFArray <> bits2nat def
+R6266:6278 PLF.SFArray <> nat2bits_step thm
+R6266:6278 PLF.SFArray <> nat2bits_step thm
+R6266:6278 PLF.SFArray <> nat2bits_step thm
+R6266:6278 PLF.SFArray <> nat2bits_step thm
+R6266:6278 PLF.SFArray <> nat2bits_step thm
+R6339:6355 PLF.SFArray <> bool2nat_nat2bool thm
+R6339:6355 PLF.SFArray <> bool2nat_nat2bool thm
+R6339:6355 PLF.SFArray <> bool2nat_nat2bool thm
+prf 6415:6428 <> unzip_zip_bits
+binder 6430:6431 <> bs:63
+binder 6433:6435 <> bs1:64
+binder 6437:6439 <> bs2:65
+binder 6441:6443 <> bs':66
+R6455:6461 PLF.SFArray <> bprefix def
+R6463:6465 PLF.SFArray <> bs1:64 var
+R6468:6470 Corelib.Init.Datatypes <> fst def
+R6473:6482 PLF.SFArray <> unzip_bits def
+R6484:6485 PLF.SFArray <> bs:63 var
+binder 6448:6452 <> PREF1:67
+R6500:6506 PLF.SFArray <> bprefix def
+R6508:6510 PLF.SFArray <> bs2:65 var
+R6513:6515 Corelib.Init.Datatypes <> snd def
+R6518:6527 PLF.SFArray <> unzip_bits def
+R6529:6530 PLF.SFArray <> bs:63 var
+binder 6493:6497 <> PREF2:68
+R6546:6548 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6543:6545 PLF.SFArray <> bs':66 var
+R6549:6556 PLF.SFArray <> zip_bits def
+R6558:6560 PLF.SFArray <> bs1:64 var
+R6562:6564 PLF.SFArray <> bs2:65 var
+binder 6538:6540 <> ZIP:69
+R6585:6587 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6573:6580 PLF.SFArray <> bits2nat def
+R6582:6584 PLF.SFArray <> bs':66 var
+R6588:6595 PLF.SFArray <> bits2nat def
+R6597:6598 PLF.SFArray <> bs:63 var
+binder 6641:6643 <> bs0:70
+binder 6645:6647 <> bs':71
+binder 6649:6651 <> bs1:72
+binder 6653:6655 <> bs2:73
+R6671:6674 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R6666:6668 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6663:6665 PLF.SFArray <> bs0:70 var
+R6678:6680 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6675:6677 PLF.SFArray <> bs0:70 var
+R6681:6684 Stdlib.Lists.List <> tail abbrev
+binder 6658:6660 <> PAT:74
+R6712:6718 PLF.SFArray <> bprefix def
+R6720:6722 PLF.SFArray <> bs1:72 var
+R6725:6727 Corelib.Init.Datatypes <> fst def
+R6730:6739 PLF.SFArray <> unzip_bits def
+R6741:6743 PLF.SFArray <> bs0:70 var
+binder 6705:6709 <> PREF1:75
+R6770:6776 PLF.SFArray <> bprefix def
+R6778:6780 PLF.SFArray <> bs2:73 var
+R6783:6785 Corelib.Init.Datatypes <> snd def
+R6788:6797 PLF.SFArray <> unzip_bits def
+R6799:6801 PLF.SFArray <> bs0:70 var
+binder 6763:6767 <> PREF2:76
+R6829:6831 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6826:6828 PLF.SFArray <> bs':71 var
+R6832:6839 PLF.SFArray <> zip_bits def
+R6841:6843 PLF.SFArray <> bs1:72 var
+R6845:6847 PLF.SFArray <> bs2:73 var
+binder 6821:6823 <> ZIP:77
+R6873:6875 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6861:6868 PLF.SFArray <> bits2nat def
+R6870:6872 PLF.SFArray <> bs':71 var
+R6876:6883 PLF.SFArray <> bits2nat def
+R6885:6887 PLF.SFArray <> bs0:70 var
+binder 6641:6643 <> bs0:78
+binder 6645:6647 <> bs':79
+binder 6649:6651 <> bs1:80
+binder 6653:6655 <> bs2:81
+R6671:6674 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R6666:6668 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6663:6665 PLF.SFArray <> bs0:78 var
+R6678:6680 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6675:6677 PLF.SFArray <> bs0:78 var
+R6681:6684 Stdlib.Lists.List <> tail abbrev
+binder 6658:6660 <> PAT:82
+R6712:6718 PLF.SFArray <> bprefix def
+R6720:6722 PLF.SFArray <> bs1:80 var
+R6725:6727 Corelib.Init.Datatypes <> fst def
+R6730:6739 PLF.SFArray <> unzip_bits def
+R6741:6743 PLF.SFArray <> bs0:78 var
+binder 6705:6709 <> PREF1:83
+R6770:6776 PLF.SFArray <> bprefix def
+R6778:6780 PLF.SFArray <> bs2:81 var
+R6783:6785 Corelib.Init.Datatypes <> snd def
+R6788:6797 PLF.SFArray <> unzip_bits def
+R6799:6801 PLF.SFArray <> bs0:78 var
+binder 6763:6767 <> PREF2:84
+R6829:6831 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6826:6828 PLF.SFArray <> bs':79 var
+R6832:6839 PLF.SFArray <> zip_bits def
+R6841:6843 PLF.SFArray <> bs1:80 var
+R6845:6847 PLF.SFArray <> bs2:81 var
+binder 6821:6823 <> ZIP:85
+R6873:6875 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6861:6868 PLF.SFArray <> bits2nat def
+R6870:6872 PLF.SFArray <> bs':79 var
+R6876:6883 PLF.SFArray <> bits2nat def
+R6885:6887 PLF.SFArray <> bs0:78 var
+R7386:7395 PLF.SFArray <> unzip_bits def
+R7386:7395 PLF.SFArray <> unzip_bits def
+R7481:7492 PLF.SFArray <> bprefix_refl thm
+R7481:7492 PLF.SFArray <> bprefix_refl thm
+R7481:7492 PLF.SFArray <> bprefix_refl thm
+R7481:7492 PLF.SFArray <> bprefix_refl thm
+R7481:7492 PLF.SFArray <> bprefix_refl thm
+R7481:7492 PLF.SFArray <> bprefix_refl thm
+R7562:7577 PLF.SFArray <> bprefix_bits2nat thm
+R7562:7577 PLF.SFArray <> bprefix_bits2nat thm
+R7562:7577 PLF.SFArray <> bprefix_bits2nat thm
+R7562:7577 PLF.SFArray <> bprefix_bits2nat thm
+R7600:7615 PLF.SFArray <> zip_bits_bprefix thm
+R7600:7615 PLF.SFArray <> zip_bits_bprefix thm
+prf 7670:7689 <> zip_bits_bprefix_nil
+binder 7691:7693 <> bs1:86
+binder 7695:7697 <> bs2:87
+R7706:7712 PLF.SFArray <> bprefix def
+R7714:7715 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R7718:7725 PLF.SFArray <> zip_bits def
+R7727:7729 PLF.SFArray <> bs1:86 var
+R7731:7733 PLF.SFArray <> bs2:87 var
+binder 7702:7703 <> RF:88
+R7757:7760 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7743:7749 PLF.SFArray <> bprefix def
+R7751:7752 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R7754:7756 PLF.SFArray <> bs1:86 var
+R7761:7767 PLF.SFArray <> bprefix def
+R7769:7770 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R7772:7774 PLF.SFArray <> bs2:87 var
+binder 7838:7839 <> x0:89
+binder 7841:7843 <> bs1:90
+binder 7845:7847 <> bs2:91
+R7870:7872 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7854:7861 PLF.SFArray <> zip_bits def
+R7863:7865 PLF.SFArray <> bs1:90 var
+R7867:7869 PLF.SFArray <> bs2:91 var
+R7873:7878 Corelib.Lists.ListDef <> repeat def
+R7886:7887 PLF.SFArray <> x0:89 var
+R7880:7884 Corelib.Init.Datatypes <> false constr
+binder 7850:7851 <> RF:92
+R7897:7900 Corelib.Init.Peano <> ::nat_scope:x_'<='_x not
+R7895:7896 PLF.SFArray <> x0:89 var
+binder 7891:7892 <> LE:93
+R7929:7932 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7915:7921 PLF.SFArray <> bprefix def
+R7923:7924 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R7926:7928 PLF.SFArray <> bs1:90 var
+R7933:7939 PLF.SFArray <> bprefix def
+R7941:7942 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R7944:7946 PLF.SFArray <> bs2:91 var
+binder 7838:7839 <> x0:94
+binder 7841:7843 <> bs1:95
+binder 7845:7847 <> bs2:96
+R7870:7872 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7854:7861 PLF.SFArray <> zip_bits def
+R7863:7865 PLF.SFArray <> bs1:95 var
+R7867:7869 PLF.SFArray <> bs2:96 var
+R7873:7878 Corelib.Lists.ListDef <> repeat def
+R7886:7887 PLF.SFArray <> x0:94 var
+R7880:7884 Corelib.Init.Datatypes <> false constr
+binder 7850:7851 <> RF:97
+R7897:7900 Corelib.Init.Peano <> ::nat_scope:x_'<='_x not
+R7895:7896 PLF.SFArray <> x0:94 var
+binder 7891:7892 <> LE:98
+R7929:7932 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7915:7921 PLF.SFArray <> bprefix def
+R7923:7924 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R7926:7928 PLF.SFArray <> bs1:95 var
+R7933:7939 PLF.SFArray <> bprefix def
+R7941:7942 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R7944:7946 PLF.SFArray <> bs2:96 var
+R8086:8089 Stdlib.Arith.PeanoNat Nat pred def
+R8092:8095 Stdlib.Arith.PeanoNat Nat pred def
+R8103:8104 Stdlib.Lists.List <> tl def
+R8112:8113 Stdlib.Lists.List <> tl def
+R8086:8089 Stdlib.Arith.PeanoNat Nat pred def
+R8092:8095 Stdlib.Arith.PeanoNat Nat pred def
+R8103:8104 Stdlib.Lists.List <> tl def
+R8112:8113 Stdlib.Lists.List <> tl def
+R8360:8360 Corelib.Init.Datatypes <> S constr
+R8360:8360 Corelib.Init.Datatypes <> S constr
+R8485:8485 Corelib.Init.Datatypes <> S constr
+R8485:8485 Corelib.Init.Datatypes <> S constr
+prf 8585:8598 <> zip_unzip_bits
+binder 8600:8601 <> bs:99
+binder 8603:8605 <> bs1:100
+binder 8607:8609 <> bs2:101
+binder 8611:8614 <> bs1':102
+binder 8616:8619 <> bs2':103
+R8630:8636 PLF.SFArray <> bprefix def
+R8638:8639 PLF.SFArray <> bs:99 var
+R8642:8649 PLF.SFArray <> zip_bits def
+R8651:8653 PLF.SFArray <> bs1:100 var
+R8655:8657 PLF.SFArray <> bs2:101 var
+binder 8624:8627 <> PREF:104
+R8680:8682 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8668:8668 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R8673:8674 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R8679:8679 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R8669:8672 PLF.SFArray <> bs1':102 var
+R8675:8678 PLF.SFArray <> bs2':103 var
+R8683:8692 PLF.SFArray <> unzip_bits def
+R8694:8695 PLF.SFArray <> bs:99 var
+binder 8664:8665 <> ZU:105
+R8732:8735 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8717:8719 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8704:8711 PLF.SFArray <> bits2nat def
+R8713:8716 PLF.SFArray <> bs1':102 var
+R8720:8727 PLF.SFArray <> bits2nat def
+R8729:8731 PLF.SFArray <> bs1:100 var
+R8749:8751 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8736:8743 PLF.SFArray <> bits2nat def
+R8745:8748 PLF.SFArray <> bs2':103 var
+R8752:8759 PLF.SFArray <> bits2nat def
+R8761:8763 PLF.SFArray <> bs2:101 var
+binder 8821:8823 <> bs0:106
+binder 8825:8827 <> bs1:107
+binder 8829:8831 <> bs2:108
+binder 8833:8836 <> bs1':109
+binder 8838:8841 <> bs2':110
+binder 8843:8843 <> x:111
+R8859:8862 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R8854:8856 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8851:8853 PLF.SFArray <> bs0:106 var
+R8866:8868 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8863:8865 PLF.SFArray <> bs0:106 var
+R8869:8872 Stdlib.Lists.List <> tail abbrev
+binder 8846:8848 <> PAT:112
+R8915:8917 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8899:8906 PLF.SFArray <> zip_bits def
+R8908:8910 PLF.SFArray <> bs1:107 var
+R8912:8914 PLF.SFArray <> bs2:108 var
+R8921:8924 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R8918:8920 PLF.SFArray <> bs0:106 var
+R8925:8930 Corelib.Lists.ListDef <> repeat def
+R8938:8938 PLF.SFArray <> x:111 var
+R8932:8936 Corelib.Init.Datatypes <> false constr
+binder 8893:8896 <> PREF:113
+R8974:8976 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8963:8963 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R8968:8968 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R8973:8973 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R8964:8967 PLF.SFArray <> bs1':109 var
+R8969:8972 PLF.SFArray <> bs2':110 var
+R8977:8986 PLF.SFArray <> unzip_bits def
+R8988:8990 PLF.SFArray <> bs0:106 var
+binder 8956:8960 <> UNZIP:114
+R9032:9035 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R9017:9019 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9004:9011 PLF.SFArray <> bits2nat def
+R9013:9016 PLF.SFArray <> bs1':109 var
+R9020:9027 PLF.SFArray <> bits2nat def
+R9029:9031 PLF.SFArray <> bs1:107 var
+R9049:9051 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9036:9043 PLF.SFArray <> bits2nat def
+R9045:9048 PLF.SFArray <> bs2':110 var
+R9052:9059 PLF.SFArray <> bits2nat def
+R9061:9063 PLF.SFArray <> bs2:108 var
+binder 8821:8823 <> bs0:115
+binder 8825:8827 <> bs1:116
+binder 8829:8831 <> bs2:117
+binder 8833:8836 <> bs1':118
+binder 8838:8841 <> bs2':119
+binder 8843:8843 <> x:120
+R8859:8862 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R8854:8856 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8851:8853 PLF.SFArray <> bs0:115 var
+R8866:8868 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8863:8865 PLF.SFArray <> bs0:115 var
+R8869:8872 Stdlib.Lists.List <> tail abbrev
+binder 8846:8848 <> PAT:121
+R8915:8917 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8899:8906 PLF.SFArray <> zip_bits def
+R8908:8910 PLF.SFArray <> bs1:116 var
+R8912:8914 PLF.SFArray <> bs2:117 var
+R8921:8924 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R8918:8920 PLF.SFArray <> bs0:115 var
+R8925:8930 Corelib.Lists.ListDef <> repeat def
+R8938:8938 PLF.SFArray <> x:120 var
+R8932:8936 Corelib.Init.Datatypes <> false constr
+binder 8893:8896 <> PREF:122
+R8974:8976 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8963:8963 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R8968:8968 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R8973:8973 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R8964:8967 PLF.SFArray <> bs1':118 var
+R8969:8972 PLF.SFArray <> bs2':119 var
+R8977:8986 PLF.SFArray <> unzip_bits def
+R8988:8990 PLF.SFArray <> bs0:115 var
+binder 8956:8960 <> UNZIP:123
+R9032:9035 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R9017:9019 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9004:9011 PLF.SFArray <> bits2nat def
+R9013:9016 PLF.SFArray <> bs1':118 var
+R9020:9027 PLF.SFArray <> bits2nat def
+R9029:9031 PLF.SFArray <> bs1:116 var
+R9049:9051 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9036:9043 PLF.SFArray <> bits2nat def
+R9045:9048 PLF.SFArray <> bs2':119 var
+R9052:9059 PLF.SFArray <> bits2nat def
+R9061:9063 PLF.SFArray <> bs2:117 var
+R9211:9230 PLF.SFArray <> zip_bits_bprefix_nil thm
+R9264:9279 PLF.SFArray <> bprefix_bits2nat thm
+R9281:9282 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R9264:9279 PLF.SFArray <> bprefix_bits2nat thm
+R9281:9282 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R9264:9279 PLF.SFArray <> bprefix_bits2nat thm
+R9281:9282 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R9264:9279 PLF.SFArray <> bprefix_bits2nat thm
+R9281:9282 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R9313:9328 PLF.SFArray <> bprefix_bits2nat thm
+R9330:9331 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R9313:9328 PLF.SFArray <> bprefix_bits2nat thm
+R9330:9331 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R9313:9328 PLF.SFArray <> bprefix_bits2nat thm
+R9330:9331 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R9313:9328 PLF.SFArray <> bprefix_bits2nat thm
+R9330:9331 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R9495:9496 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R9499:9500 Stdlib.Lists.List <> tl def
+R9508:9509 Stdlib.Lists.List <> tl def
+R9516:9517 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R9519:9520 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R9523:9526 Stdlib.Arith.PeanoNat Nat pred def
+R9495:9496 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R9499:9500 Stdlib.Lists.List <> tl def
+R9508:9509 Stdlib.Lists.List <> tl def
+R9516:9517 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R9519:9520 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R9523:9526 Stdlib.Arith.PeanoNat Nat pred def
+R9701:9710 PLF.SFArray <> unzip_bits def
+R9701:9710 PLF.SFArray <> unzip_bits def
+R9793:9794 Stdlib.Lists.List <> tl def
+R9802:9803 Stdlib.Lists.List <> tl def
+R9793:9794 Stdlib.Lists.List <> tl def
+R9802:9803 Stdlib.Lists.List <> tl def
+prf 9947:9961 <> dec_enc_correct
+binder 9971:9971 <> i:124
+binder 9973:9973 <> n:125
+binder 9975:9975 <> m:126
+R9996:9998 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9983:9993 PLF.SFArray <> decode_pair def
+R9995:9995 PLF.SFArray <> i:124 var
+R9999:9999 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R10001:10001 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R10003:10003 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R10000:10000 PLF.SFArray <> n:125 var
+R10002:10002 PLF.SFArray <> m:126 var
+binder 9978:9980 <> DEC:127
+R10026:10028 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10011:10021 PLF.SFArray <> encode_pair def
+R10023:10023 PLF.SFArray <> n:125 var
+R10025:10025 PLF.SFArray <> m:126 var
+R10029:10029 PLF.SFArray <> i:124 var
+R10048:10058 PLF.SFArray <> encode_pair def
+R10061:10071 PLF.SFArray <> decode_pair def
+R10095:10104 PLF.SFArray <> unzip_bits def
+R10095:10104 PLF.SFArray <> unzip_bits def
+R10151:10167 PLF.SFArray <> nat2bits_bits2nat thm
+R10151:10167 PLF.SFArray <> nat2bits_bits2nat thm
+R10151:10167 PLF.SFArray <> nat2bits_bits2nat thm
+R10182:10195 PLF.SFArray <> unzip_zip_bits thm
+R10230:10246 PLF.SFArray <> bits2nat_nat2bits thm
+R10182:10195 PLF.SFArray <> unzip_zip_bits thm
+R10230:10246 PLF.SFArray <> bits2nat_nat2bits thm
+R10230:10246 PLF.SFArray <> bits2nat_nat2bits thm
+prf 10263:10277 <> enc_dec_correct
+binder 10287:10287 <> n:128
+binder 10289:10289 <> m:129
+R10321:10323 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10292:10302 PLF.SFArray <> decode_pair def
+R10305:10315 PLF.SFArray <> encode_pair def
+R10317:10317 PLF.SFArray <> n:128 var
+R10319:10319 PLF.SFArray <> m:129 var
+R10324:10324 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R10326:10327 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R10329:10329 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R10325:10325 PLF.SFArray <> n:128 var
+R10328:10328 PLF.SFArray <> m:129 var
+R10348:10358 PLF.SFArray <> encode_pair def
+R10361:10371 PLF.SFArray <> decode_pair def
+R10395:10404 PLF.SFArray <> unzip_bits def
+R10395:10404 PLF.SFArray <> unzip_bits def
+R10429:10445 PLF.SFArray <> nat2bits_bits2nat thm
+R10452:10468 PLF.SFArray <> nat2bits_bits2nat thm
+R10429:10445 PLF.SFArray <> nat2bits_bits2nat thm
+R10429:10445 PLF.SFArray <> nat2bits_bits2nat thm
+R10452:10468 PLF.SFArray <> nat2bits_bits2nat thm
+R10452:10468 PLF.SFArray <> nat2bits_bits2nat thm
+R10486:10499 PLF.SFArray <> zip_unzip_bits thm
+R10578:10594 PLF.SFArray <> bits2nat_nat2bits thm
+R10578:10594 PLF.SFArray <> bits2nat_nat2bits thm
+def 10643:10651 <> array_get
+R10660:10662 Corelib.Init.Datatypes <> nat ind
+binder 10654:10654 <> a:130
+binder 10656:10656 <> i:131
+R10667:10669 Corelib.Init.Datatypes <> nat ind
+R10682:10682 PLF.SFArray <> i:131 var
+R10698:10700 Corelib.Init.Datatypes <> fst def
+R10703:10713 PLF.SFArray <> decode_pair def
+R10715:10715 PLF.SFArray <> a:130 var
+R10722:10722 Corelib.Init.Datatypes <> S constr
+R10730:10738 PLF.SFArray <> array_get:132 def
+R10741:10743 Corelib.Init.Datatypes <> snd def
+R10746:10756 PLF.SFArray <> decode_pair def
+R10758:10758 PLF.SFArray <> a:130 var
+def 10782:10790 <> array_set
+R10801:10803 Corelib.Init.Datatypes <> nat ind
+binder 10793:10793 <> a:134
+binder 10795:10795 <> i:135
+binder 10797:10797 <> v:136
+R10808:10810 Corelib.Init.Datatypes <> nat ind
+R10823:10823 PLF.SFArray <> i:135 var
+R10839:10849 PLF.SFArray <> encode_pair def
+R10851:10851 PLF.SFArray <> v:136 var
+R10854:10856 Corelib.Init.Datatypes <> snd def
+R10859:10869 PLF.SFArray <> decode_pair def
+R10871:10871 PLF.SFArray <> a:134 var
+R10879:10879 Corelib.Init.Datatypes <> S constr
+R10903:10913 PLF.SFArray <> decode_pair def
+R10915:10915 PLF.SFArray <> a:134 var
+binder 10892:10893 <> hd:139
+binder 10896:10897 <> tl:140
+R10932:10942 PLF.SFArray <> encode_pair def
+R10944:10945 PLF.SFArray <> hd:139 var
+R10948:10956 PLF.SFArray <> array_set:137 def
+R10964:10964 PLF.SFArray <> v:136 var
+R10958:10959 PLF.SFArray <> tl:140 var
+def 10984:10991 <> arr2list
+R10999:11001 Corelib.Init.Datatypes <> nat ind
+binder 10994:10996 <> arr:141
+R11009:11011 Corelib.Init.Datatypes <> nat ind
+binder 11005:11006 <> sz:142
+R11016:11019 Corelib.Init.Datatypes <> list ind
+R11021:11023 Corelib.Init.Datatypes <> nat ind
+R11036:11037 PLF.SFArray <> sz:142 var
+R11053:11054 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R11060:11060 Corelib.Init.Datatypes <> S constr
+R11085:11095 PLF.SFArray <> decode_pair def
+R11097:11099 PLF.SFArray <> arr:141 var
+binder 11074:11075 <> hd:145
+binder 11078:11079 <> tl:146
+R11119:11122 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R11117:11118 PLF.SFArray <> hd:145 var
+R11123:11130 PLF.SFArray <> arr2list:143 def
+R11132:11133 PLF.SFArray <> tl:146 var
+def 11156:11162 <> set_nth
+binder 11165:11165 <> A:147
+R11180:11182 Corelib.Init.Datatypes <> nat ind
+binder 11176:11176 <> n:148
+R11190:11190 PLF.SFArray <> A:147 var
+binder 11186:11186 <> x:149
+R11198:11201 Corelib.Init.Datatypes <> list ind
+R11203:11203 PLF.SFArray <> A:147 var
+binder 11194:11194 <> l:150
+R11208:11211 Corelib.Init.Datatypes <> list ind
+R11213:11213 PLF.SFArray <> A:147 var
+R11229:11229 PLF.SFArray <> n:148 var
+R11226:11226 PLF.SFArray <> l:150 var
+R11240:11241 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R11249:11250 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R11257:11260 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R11264:11264 Corelib.Init.Datatypes <> O constr
+R11270:11273 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R11269:11269 PLF.SFArray <> x:149 var
+R11281:11284 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R11288:11288 Corelib.Init.Datatypes <> S constr
+R11297:11300 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R11301:11307 PLF.SFArray <> set_nth:151 def
+R11312:11312 PLF.SFArray <> x:149 var
+prf 11348:11359 <> arr2list_get
+binder 11361:11362 <> sz:154
+binder 11364:11364 <> i:155
+binder 11366:11368 <> arr:156
+R11381:11383 Corelib.Init.Peano <> ::nat_scope:x_'<'_x not
+R11380:11380 PLF.SFArray <> i:155 var
+R11384:11385 PLF.SFArray <> sz:154 var
+binder 11373:11377 <> RANGE:157
+R11409:11411 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11394:11402 PLF.SFArray <> array_get def
+R11404:11406 PLF.SFArray <> arr:156 var
+R11408:11408 PLF.SFArray <> i:155 var
+R11412:11414 Corelib.Lists.ListDef <> nth def
+R11419:11426 PLF.SFArray <> arr2list def
+R11428:11430 PLF.SFArray <> arr:156 var
+R11432:11433 PLF.SFArray <> sz:154 var
+R11416:11416 PLF.SFArray <> i:155 var
+R11554:11564 PLF.SFArray <> decode_pair def
+R11554:11564 PLF.SFArray <> decode_pair def
+R11626:11636 PLF.SFArray <> decode_pair def
+R11626:11636 PLF.SFArray <> decode_pair def
+prf 11680:11691 <> arr2list_set
+binder 11693:11694 <> sz:158
+binder 11696:11696 <> i:159
+binder 11698:11698 <> v:160
+binder 11700:11702 <> arr:161
+R11715:11717 Corelib.Init.Peano <> ::nat_scope:x_'<'_x not
+R11714:11714 PLF.SFArray <> i:159 var
+R11718:11719 PLF.SFArray <> sz:158 var
+binder 11707:11711 <> RANGE:162
+R11759:11761 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11728:11735 PLF.SFArray <> arr2list def
+R11738:11746 PLF.SFArray <> array_set def
+R11748:11750 PLF.SFArray <> arr:161 var
+R11752:11752 PLF.SFArray <> i:159 var
+R11754:11754 PLF.SFArray <> v:160 var
+R11757:11758 PLF.SFArray <> sz:158 var
+R11762:11768 PLF.SFArray <> set_nth def
+R11775:11782 PLF.SFArray <> arr2list def
+R11784:11786 PLF.SFArray <> arr:161 var
+R11788:11789 PLF.SFArray <> sz:158 var
+R11772:11772 PLF.SFArray <> v:160 var
+R11770:11770 PLF.SFArray <> i:159 var
+R11908:11918 PLF.SFArray <> decode_pair def
+R11908:11918 PLF.SFArray <> decode_pair def
+R11934:11948 PLF.SFArray <> enc_dec_correct thm
+R11934:11948 PLF.SFArray <> enc_dec_correct thm
+R11934:11948 PLF.SFArray <> enc_dec_correct thm
+R12005:12015 PLF.SFArray <> decode_pair def
+R12005:12015 PLF.SFArray <> decode_pair def
+R12031:12045 PLF.SFArray <> enc_dec_correct thm
+R12031:12045 PLF.SFArray <> enc_dec_correct thm
+R12031:12045 PLF.SFArray <> enc_dec_correct thm
+prf 12090:12104 <> arr2list_length
+binder 12106:12108 <> arr:163
+binder 12110:12111 <> sz:164
+R12145:12147 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12116:12126 Stdlib.Lists.List <> length abbrev
+R12129:12136 PLF.SFArray <> arr2list def
+R12138:12140 PLF.SFArray <> arr:163 var
+R12142:12143 PLF.SFArray <> sz:164 var
+R12148:12149 PLF.SFArray <> sz:164 var
+R12221:12231 PLF.SFArray <> decode_pair def
+R12221:12231 PLF.SFArray <> decode_pair def
+prf 12289:12305 <> arr2list_plus_one
+binder 12307:12308 <> sz:165
+binder 12310:12312 <> arr:166
+R12338:12340 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12317:12324 PLF.SFArray <> arr2list def
+R12326:12328 PLF.SFArray <> arr:166 var
+R12333:12335 Corelib.Init.Nat <> ::nat_scope:x_'+'_x not
+R12331:12332 PLF.SFArray <> sz:165 var
+R12356:12359 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R12341:12348 PLF.SFArray <> arr2list def
+R12350:12352 PLF.SFArray <> arr:166 var
+R12354:12355 PLF.SFArray <> sz:165 var
+R12360:12360 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R12377:12377 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R12361:12369 PLF.SFArray <> array_get def
+R12371:12373 PLF.SFArray <> arr:166 var
+R12375:12376 PLF.SFArray <> sz:165 var
+R12446:12456 PLF.SFArray <> decode_pair def
+R12446:12456 PLF.SFArray <> decode_pair def
+R12446:12456 PLF.SFArray <> decode_pair def
+prf 12504:12517 <> get_set_nth_eq
+binder 12519:12519 <> i:167
+binder 12521:12521 <> v:168
+binder 12523:12523 <> l:169
+R12536:12538 Corelib.Init.Peano <> ::nat_scope:x_'<'_x not
+R12535:12535 PLF.SFArray <> i:167 var
+R12539:12549 Stdlib.Lists.List <> length abbrev
+R12551:12551 PLF.SFArray <> l:169 var
+binder 12528:12532 <> RANGE:170
+R12583:12585 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12560:12562 Corelib.Lists.ListDef <> nth def
+R12567:12573 PLF.SFArray <> set_nth def
+R12579:12579 PLF.SFArray <> l:169 var
+R12577:12577 PLF.SFArray <> v:168 var
+R12575:12575 PLF.SFArray <> i:167 var
+R12564:12564 PLF.SFArray <> i:167 var
+R12586:12586 PLF.SFArray <> v:168 var
+prf 12763:12777 <> get_set_nth_neq
+binder 12779:12779 <> i:171
+binder 12781:12781 <> k:172
+binder 12783:12783 <> v:173
+binder 12785:12785 <> l:174
+R12798:12800 Corelib.Init.Peano <> ::nat_scope:x_'<'_x not
+R12797:12797 PLF.SFArray <> i:171 var
+R12801:12811 Stdlib.Lists.List <> length abbrev
+R12813:12813 PLF.SFArray <> l:174 var
+binder 12790:12794 <> RANGE:175
+R12825:12828 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R12824:12824 PLF.SFArray <> i:171 var
+R12829:12829 PLF.SFArray <> k:172 var
+binder 12819:12821 <> NEQ:176
+R12861:12863 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12838:12840 Corelib.Lists.ListDef <> nth def
+R12845:12851 PLF.SFArray <> set_nth def
+R12857:12857 PLF.SFArray <> l:174 var
+R12855:12855 PLF.SFArray <> v:173 var
+R12853:12853 PLF.SFArray <> k:172 var
+R12842:12842 PLF.SFArray <> i:171 var
+R12864:12866 Corelib.Lists.ListDef <> nth def
+R12870:12870 PLF.SFArray <> l:174 var
+R12868:12868 PLF.SFArray <> i:171 var
+prf 13038:13051 <> set_nth_length
+binder 13053:13053 <> k:177
+binder 13055:13055 <> v:178
+R13061:13064 Corelib.Init.Datatypes <> list ind
+R13066:13068 Corelib.Init.Datatypes <> nat ind
+binder 13058:13058 <> l:179
+R13101:13103 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13074:13084 Stdlib.Lists.List <> length abbrev
+R13087:13093 PLF.SFArray <> set_nth def
+R13099:13099 PLF.SFArray <> l:179 var
+R13097:13097 PLF.SFArray <> v:178 var
+R13095:13095 PLF.SFArray <> k:177 var
+R13104:13114 Stdlib.Lists.List <> length abbrev
+R13116:13116 PLF.SFArray <> l:179 var
+prf 13250:13261 <> set_nth_spec
+binder 13264:13264 <> T:180
+binder 13267:13267 <> k:181
+R13273:13273 PLF.SFArray <> T:180 var
+binder 13270:13270 <> v:182
+binder 13276:13277 <> l1:183
+binder 13279:13280 <> l2:184
+binder 13282:13283 <> v':185
+R13307:13309 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13293:13303 Stdlib.Lists.List <> length abbrev
+R13305:13306 PLF.SFArray <> l1:183 var
+R13310:13310 PLF.SFArray <> k:181 var
+binder 13288:13290 <> LEN:186
+R13349:13351 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13319:13325 PLF.SFArray <> set_nth def
+R13334:13337 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R13332:13333 PLF.SFArray <> l1:183 var
+R13342:13345 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R13338:13338 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R13341:13341 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R13339:13340 PLF.SFArray <> v':185 var
+R13346:13347 PLF.SFArray <> l2:184 var
+R13329:13329 PLF.SFArray <> v:182 var
+R13327:13327 PLF.SFArray <> k:181 var
+R13354:13357 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R13352:13353 PLF.SFArray <> l1:183 var
+R13361:13364 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R13358:13358 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R13360:13360 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R13359:13359 PLF.SFArray <> v:182 var
+R13365:13366 PLF.SFArray <> l2:184 var

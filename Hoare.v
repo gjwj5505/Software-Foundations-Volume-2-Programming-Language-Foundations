@@ -2708,18 +2708,14 @@ Qed.
 
 (** Use your rules to prove the following triple. *)
 
-(* Example assert_assume_example:
+Example assert_assume_example:
   {{True}}
     assume (X = 1);
     X := X + 1;
     assert (X = 2)
   {{True}}.
 Proof.
-  eapply hoare_seq.
-  - eapply hoare_seq.
-    + eapply hoare_assert.
-  -
-Qed. *)
+Admitted.
 
 End HoareAssertAssume.
 (** [] *)
